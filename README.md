@@ -3,10 +3,10 @@ libgdx
 
 Ejemplos de programación de videojuegos con Java y libgdx
 
-- **DropGame_v1**
-- **DropGame_v2**
-- **DropGame_v3**
+- **DropGame_v1**: Ejemplo básico de juego desarrollado con libgdx según la Wiki oficial
+- **DropGame_v2**: Evolución de la primera versión de _DropGame_, utilizando `Screens` y otros elementos en el juego
+- **DropGame_v3**: Evolución de la segunda versión de _DropGame_
 - **EstructuraProyectoLigbdx**: Proyecto vacío que muestra la estructura básica de un proyecto de libgdx para android y escritorio
-- **JFighter2DX_v1**
-- **Jumper2DX_v1**
-- **Robin2DX_v1**
+- **JFighter2DX_v1**: Juego de naves desarrollado con libgdx
+- **Jumper2DX_v1**: Juego de plataformas, estilo _Mario3_ desarrollado con libgdx
+- **Robin2DX_v1**: Juego 2D tipo _Zelda_ desarrollado con libgdx
