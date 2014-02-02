@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="30" height="30" tilewidth="16" tileheight="16">
+ <tileset firstgid="1" name="tileset" tilewidth="16" tileheight="16">
+  <image source="public_tileset_by_orohnpokemon-d4vpcfu.png" width="864" height="705"/>
+ </tileset>
+ <layer name="Capa de Patrones 1" width="30" height="30">
+  <data encoding="base64" compression="zlib">
+   eJzt1MkJwkAYhuEJJGnC7ezWgKnC7ex2tw23BixAjE24NWABglW4XX0DCQwhAzFDPMgcHn6Y/5v5bmMJIawcbOFhl9P7pjd9b8EWoogSyqjY+ju5V5VrMzvoooe+dD/rTu5V5WbMORZYYiXdz7qTe1W5PfOAI044Y+3o7eTepFyQuTMfeOKFNy6O3k7uTcoFmSrZGupooAnb1dvJvUm5KecD5hAjjDFBy9XbeSFfkduIfES9eb2f1fULfkyaO7dQ/Pzbvy/q/OW/a3pNr+k1vabX9P5b7wfxWcR7
+  </data>
+ </layer>
+</map>
