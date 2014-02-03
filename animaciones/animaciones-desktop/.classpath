@@ -6,6 +6,6 @@
 	<classpathentry kind="lib" path="libs/gdx-backend-lwjgl-natives.jar"/>
 	<classpathentry kind="lib" path="libs/gdx-backend-lwjgl.jar"/>
 	<classpathentry kind="lib" path="libs/gdx-natives.jar"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/frogger"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/animaciones"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
