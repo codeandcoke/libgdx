@@ -64,10 +64,6 @@ public class Frogger extends Game {
 		// Limpia la pantalla
 		Gdx.gl.glClear(GL10.GL_COLOR_BUFFER_BIT);
 		
-		// Actualiza la cámara
-		camera.zoom = 1 / 5f;
-		camera.update();
-		
 		handleInput(dt);
 		update(dt);
 		
