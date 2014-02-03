@@ -46,7 +46,7 @@ public class Frogger extends Game {
 		Texture.setEnforcePotImages(false);
 		
 		frog = new Frog(10, 10, 3);
-		cocodrile = new Cocodrile(0, 300);
+		cocodrile = new Cocodrile(0, Constants.SCREEN_HEIGHT / 2);
 	}
 
 	/*
