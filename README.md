@@ -9,10 +9,11 @@ Ejemplos de programación de videojuegos con Java y libgdx
 - **EstructuraProyectoLigbdx**: Proyecto vacío que muestra la estructura básica de un proyecto de libgdx para android y escritorio
 - **Robin2DX_v1**: Juego 2D tipo _Zelda_ desarrollado con libgdx
 - **animaciones**: Cómo trabajar con animaciones 2D en libgdx
+- **bombermanx**: Ejemplo de juego 2D clon de _Bomberman_
 - **box2d_forces**: Cómo aplicar fuerzas en una escena con Box2D
 - **box2d_hola**: Cómo crear un escena con Box2D
 - **box2d_joints**: Cómo crear _joints_ con Box2D
 - **box2d_lights**: Cómo aplicar luces de diferentes tipos con Box2D
 - **box2d_textures**: Cómo aplicar texturas a los cuerpos con Box2D
-- **frogger**: Clon del mítico _Rana_ (sólo están los sprites)
+- **frogger**: Ejemplo de juego 2D clone de _Rana_ (sólo sprites ahora mismo)
 - **jumper2dx**: Ejemplo de juego de plataformas utilizando TiledMaps
