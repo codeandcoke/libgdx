@@ -3,7 +3,7 @@ libgdx
 
 Ejemplos de programación de videojuegos con Java y libgdx
 
-- **Characters**: Ejemplo de cómo crear la estructura de clases, utilizando _POO_, para los personajes (enemigos o no) de un juego
+- **Characters**: Ejemplo de cómo crear la estructura de clases, utilizando _POO_, para los personajes (enemigos o no) de un juego. El ejemplo es totalmente válido para crear la estructura de otros elementos del juego como los _powerups_, o incluso podrían pertenecer a dicha estructura
 - **ConfigurationManager**: Ejemplo de cómo crear un `ConfigurationManager`, para controlar las preferencias del usuario en el juego
 - **DropGame_v1**: Ejemplo básico de juego desarrollado con libgdx según la Wiki oficial
 - **DropGame_v2**: Evolución de la primera versión de _DropGame_, utilizando `Screens` y otros elementos en el juego
