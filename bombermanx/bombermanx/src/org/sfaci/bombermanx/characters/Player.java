@@ -78,7 +78,7 @@ public class Player extends Character {
 	
 	// Desplaza la tabla en el eje x
 	public void move(Vector2 movement) {
-		
+				
 		movement.scl(SPEED);
 		position.add(movement);
 	}

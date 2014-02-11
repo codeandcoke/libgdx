@@ -38,10 +38,11 @@ public class MainMenuScreen implements Screen {
 		/*
 		 * Si el usuario toca la pantalla se inicia la partida
 		 */
-		if (Gdx.input.isTouched()) {
+		if (Gdx.input.isTouched() || (Gdx.input.isKeyPressed(Keys.ANY_KEY))) {
 			game.setScreen(new GameScreen(game));
 			dispose();
 		}
+		
 		if (Gdx.input.isKeyPressed(Keys.ESCAPE)) {
 			dispose();
 			System.exit(0);
