@@ -8,6 +8,8 @@ Ejemplos de programación de videojuegos con Java y libgdx
 - **DropGame_v1**: Ejemplo básico de juego desarrollado con libgdx según la [Wiki oficial](https://github.com/libgdx/libgdx/wiki)
 - **DropGame_v2**: Evolución de la primera versión de _DropGame_, utilizando `Screens` y otros elementos en el juego
 - **DropGame_v3**: Evolución de la segunda versión de _DropGame_
+- **DropGame_POO**: Evolución de la tercera versión de _DropGame_ utilizando Programación Orientada a Objetos para definir la estructura de
+  los caracteres del juego
 - **EstructuraProyectoLigbdx**: Proyecto vacío que muestra la estructura básica de un proyecto de libgdx para android y escritorio
 - **LevelManager**: Ejemplo de un `LevelManager`, la clase encargada de generar el nivel donde el usuario juega. En este ejemplo se crean niveles para un juego de naves, pero en [bombermax](https://github.com/sfaci/libgdx/tree/master/bombermanx) y [jumper2dx](https://github.com/sfaci/libgdx/tree/master/jumper2dx) se pueden ver más ejemplos para otros tipos de juego
 - **Robin2DX_v1**: Juego 2D tipo _Zelda_ desarrollado con libgdx
