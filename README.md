@@ -21,6 +21,7 @@ Ejemplos de programación de videojuegos con Java y libgdx
 - **box2d_lights**: Cómo aplicar luces de diferentes tipos con Box2D
 - **box2d_textures**: Cómo aplicar texturas a los cuerpos con Box2D
 - **frogger**: Ejemplo de juego 2D clone de _Rana_ (sólo sprites ahora mismo)
+- **jfighter2dx**: Ejemplo de juego de naves 2D (menú, generador de niveles, varios enemigos) 
 - **jumper2dx**: Ejemplo de juego de plataformas utilizando TiledMaps
 
 Puedes acceder a las _demos_ de algunos de los proyectos [aqui](https://github.com/sfaci/libgdx/releases)
