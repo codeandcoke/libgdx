@@ -1,0 +1,13 @@
+s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s
+s,d,x,x,x,x,x,-,-,-,-,-,-,-,a,-,-,-,s
+s,x,x,x,x,x,x,-,-,-,-,-,-,-,-,x,-,-,s
+s,-,-,-,x,x,x,x,x,x,x,x,x,x,-,x,c,-,s
+s,x,x,x,x,x,x,x,x,x,x,x,x,x,-,x,-,-,s
+s,-,-,-,x,x,-,-,-,-,-,-,-,-,-,x,-,-,s
+s,x,x,x,x,x,x,x,x,x,x,x,x,x,-,x,-,-,s
+s,u,x,u,-,-,-,-,-,-,-,-,-,-,-,a,-,-,s
+s,-,x,-,x,x,x,x,x,x,x,x,x,x,x,x,x,x,s
+s,-,x,b,-,-,-,-,-,-,-,-,-,-,-,-,-,c,s
+s,-,x,-,x,x,x,x,x,x,x,x,x,x,x,x,x,-,s
+s,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,s
+s,x,x,x,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s
