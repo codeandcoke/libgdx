@@ -12,7 +12,6 @@ Ejemplos de programación de videojuegos con Java y libgdx
   los caracteres del juego
 - **EstructuraProyectoLigbdx**: Proyecto vacío que muestra la estructura básica de un proyecto de libgdx para android y escritorio
 - **LevelManager**: Ejemplo de un `LevelManager`, la clase encargada de generar el nivel donde el usuario juega. En este ejemplo se crean niveles para un juego de naves, pero en [bombermax](https://github.com/sfaci/libgdx/tree/master/bombermanx) y [jumper2dx](https://github.com/sfaci/libgdx/tree/master/jumper2dx) se pueden ver más ejemplos para otros tipos de juego
-- **Robin2DX_v1**: Juego 2D tipo _Zelda_ desarrollado con libgdx
 - **animaciones**: Cómo trabajar con animaciones 2D en libgdx
 - **bombermanx**: Ejemplo de juego 2D clon de _Bomberman_
 - **box2d_forces**: Cómo aplicar fuerzas en una escena con Box2D
@@ -23,5 +22,6 @@ Ejemplos de programación de videojuegos con Java y libgdx
 - **frogger**: Ejemplo de juego 2D clone de _Rana_ (sólo sprites ahora mismo)
 - **jfighter2dx**: Ejemplo de juego de naves 2D (menú, generador de niveles, varios enemigos) 
 - **jumper2dx**: Ejemplo de juego de plataformas utilizando TiledMaps
+- **robin2dx**: Juego 2D tipo _Zelda_ desarrollado con libgdx. Ejemplo de cómo cargar un _TiledMap_, mover un personaje por la pantalla y colisionar con algunos elementos de éste
 
 Puedes acceder a las _demos_ de algunos de los proyectos [aqui](https://github.com/sfaci/libgdx/releases)
