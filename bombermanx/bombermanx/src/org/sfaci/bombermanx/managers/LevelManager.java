@@ -2,11 +2,13 @@ package org.sfaci.bombermanx.managers;
 
 import org.sfaci.bombermanx.characters.Brick;
 import org.sfaci.bombermanx.characters.Brick.BrickType;
+import org.sfaci.bombermanx.characters.Enemy;
 import org.sfaci.bombermanx.util.Constants;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.math.Vector2;
 
 /**
  * Clase que gestiona los niveles del juego
@@ -16,12 +18,19 @@ import com.badlogic.gdx.graphics.Texture;
 public class LevelManager {
 
 	public int currentLevel;
+	public int powerups;
+	// Limite de powerups que aparecen en un mismo nivel
+	public int powerupsLimit;
 	SpriteManager spriteManager;
 	
 	public LevelManager(SpriteManager spriteManager) {
 		
 		this.spriteManager = spriteManager;
+		this.spriteManager.levelManager = this;
+		
 		currentLevel = 1;
+		powerupsLimit = 5;
+		powerups = 0;
 	}
 	
 	/**
@@ -43,7 +52,35 @@ public class LevelManager {
 					x += Constants.BRICK_WIDTH;
 					continue;
 				}
-	
+				
+				if (brickId.trim().equals("a")) {
+					Enemy enemy = new Enemy(x, y, "enemy_blue", Enemy.Direction.VERTICAL);
+					spriteManager.enemies.add(enemy);
+					x += Constants.BRICK_WIDTH;
+					continue;
+				}
+				
+				if (brickId.trim().equals("u")) {
+					Enemy enemy = new Enemy(x, y, "enemy_ugly", Enemy.Direction.VERTICAL);
+					spriteManager.enemies.add(enemy);
+					x += Constants.BRICK_WIDTH;
+					continue;
+				}
+				
+				if (brickId.trim().equals("b")) {
+					Enemy enemy = new Enemy(x, y, "enemy_barrel", Enemy.Direction.VERTICAL);
+					spriteManager.enemies.add(enemy);
+					x += Constants.BRICK_WIDTH;
+					continue;
+				}
+				
+				if (brickId.trim().equals("c")) {
+					Enemy enemy = new Enemy(x, y, "enemy_cookie", Enemy.Direction.VERTICAL);
+					spriteManager.enemies.add(enemy);
+					x += Constants.BRICK_WIDTH;
+					continue;
+				}
+				
 				brick = new Brick(getTextureBrick(brickId.trim()), x, y, getBrickType(brickId.trim()), 1, 1);
 				spriteManager.bricks.add(brick);
 				x += Constants.BRICK_WIDTH;
@@ -54,6 +91,31 @@ public class LevelManager {
 		}
 	}
 	
+	/**
+	 * Pasa al siguiente nivel
+	 */
+	public void passLevel() {
+		
+		currentLevel++;
+		resetLevel();
+		loadCurrentLevel();
+	}
+	
+	/**
+	 * Resetea el nivel actual
+	 */
+	private void resetLevel() {
+		spriteManager.bricks.clear();
+		spriteManager.bombs.clear();
+		spriteManager.enemies.clear();
+		spriteManager.player.position = new Vector2(0, 0);
+	}
+	
+	/**
+	 * Obtiene el tipo de ladrillo según el caracter leído en el fichero de nivel
+	 * @param brickId
+	 * @return
+	 */
 	private BrickType getBrickType(String brickId) {
 		
 		switch (brickId) {
@@ -61,6 +123,8 @@ public class LevelManager {
 			return BrickType.BRICK;
 		case "s":
 			return BrickType.STONE;
+		case "d":
+			return BrickType.DOOR;
 		default:
 			return null;
 		}
@@ -78,6 +142,8 @@ public class LevelManager {
 			return ResourceManager.getTexture("brick");
 		case "s":
 			return ResourceManager.getTexture("stone");
+		case "d":
+			return ResourceManager.getTexture("door");
 		default:
 			return null;
 		}

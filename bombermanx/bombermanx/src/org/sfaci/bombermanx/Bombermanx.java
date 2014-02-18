@@ -1,11 +1,14 @@
 package org.sfaci.bombermanx;
 
+import org.sfaci.bombermanx.screens.MainMenuScreen;
 import org.sfaci.bombermanx.util.Constants;
 
 import com.badlogic.gdx.Game;
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.scenes.scene2d.ui.Skin;
 
 /**
  * Clase principal del proyecto principal del juego
@@ -16,8 +19,9 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 public class Bombermanx extends Game {
 
 	public OrthographicCamera camera;
-	SpriteBatch spriteBatch;
-	BitmapFont fuente;
+	public SpriteBatch spriteBatch;
+	public BitmapFont fuente;
+	public Skin skin;
 	
 	@Override
 	public void create() {
@@ -43,5 +47,11 @@ public class Bombermanx extends Game {
 		fuente.dispose();
 	}
 	
+	public Skin getSkin() {
+		if(skin == null ) {
+            skin = new Skin(Gdx.files.internal("ui/uiskin.json"));
+        }
+        return skin;
+	}
 	
 }

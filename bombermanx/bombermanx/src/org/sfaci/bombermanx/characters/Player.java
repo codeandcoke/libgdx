@@ -1,6 +1,7 @@
 package org.sfaci.bombermanx.characters;
 
 import org.sfaci.bombermanx.managers.ResourceManager;
+import org.sfaci.bombermanx.managers.SpriteManager;
 import org.sfaci.bombermanx.util.Constants;
 
 import com.badlogic.gdx.Gdx;
@@ -8,6 +9,8 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Animation;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.math.Vector2;
+import com.badlogic.gdx.utils.Timer;
+import com.badlogic.gdx.utils.Timer.Task;
 
 /**
  * Clase que representa al jugador
@@ -17,29 +20,54 @@ import com.badlogic.gdx.math.Vector2;
  */
 public class Player extends Character {
 
-	public final float SPEED = 50f;
 	private final int FRAMES = 3;
-	public enum State {
-		RIGHT, UP, DOWN, LEFT, IDLE;
-	}
+	// Tasa de colocación de bombas (1000 = 1 por segundo)
+	public final float BOMB_RATE = 0.2f;
 	
+	public enum State {
+		RIGHT, UP, DOWN, LEFT, IDLE, EXPLODE;
+	}
+	// Vida del personaje
 	int lives;
+	// Indica cuantas bombas hay puestas y el máximo de bombas que puede haber puestas al mismo tiempo
+	public int activeBombs, bombsLimit;
+	float timeBeetwenBombs;
+	public int bombLength, bombStrength;
+	public float speed = 50;
 	public State state;
 	
 	Animation rightAnimation;
 	Animation leftAnimation;
 	Animation upAnimation;
 	Animation downAnimation;
+	Animation explosionAnimation;
 	float stateTime;
+	SpriteManager spriteManager;
 	
-	public Player(Texture texture, float x, float y, int lives) {
+	/**
+	 * 
+	 * @param texture
+	 * @param x
+	 * @param y
+	 * @param lives
+	 * @param spriteManager
+	 */
+	public Player(Texture texture, float x, float y, int lives, SpriteManager spriteManager) {
 		super(texture, x, y);
+		this.spriteManager = spriteManager;
 		this.lives = lives;
+		activeBombs = 0;
+		bombsLimit = 1;
+		bombLength = 1;
+		bombStrength = 1;
 		state = State.IDLE;
 		
 		createAnimations();
 	}
 	
+	/**
+	 * Crea las animaciones del personaje
+	 */
 	private void createAnimations() {
 		
 		// Carga la animación de un spritesheet (todos los frames están en un mismo fichero)
@@ -74,13 +102,68 @@ public class Player extends Character {
 			rightFrames[i] = frames[0][i];
 		}
 		downAnimation = new Animation(0.15f, rightFrames);
+		
+		spriteSheet = ResourceManager.getTexture("player_explosion_animation");
+		frames = TextureRegion.split(spriteSheet, spriteSheet.getWidth() / (FRAMES * 2), spriteSheet.getHeight());
+		rightFrames = new TextureRegion[FRAMES * 2];
+		for (int i = 0; i < FRAMES * 2; i++) {
+			rightFrames[i] = frames[0][i];
+		}
+		explosionAnimation = new Animation(0.2f, rightFrames);
 	}
 	
-	// Desplaza la tabla en el eje x
+	/**
+	 * Mueve al jugador
+	 * @param movement Movimiento en x e y para el jugador
+	 */
 	public void move(Vector2 movement) {
 				
-		movement.scl(SPEED);
+		if (state == State.EXPLODE)
+			return;
+		
+		movement.scl(speed);
 		position.add(movement);
+	}
+	
+	/**
+	 * Hace explotar al jugador
+	 * Ha sido alcanzado por un enemigo o una de sus explosiones
+	 */
+	public void explode() {
+		state = State.EXPLODE;
+		stateTime = 0;
+	}
+	
+	/**
+	 * Coloca una bomba en la posición actual
+	 */
+	public void putBomb() {
+		if (activeBombs < bombsLimit)
+			if (timeBeetwenBombs >= BOMB_RATE) {
+				
+				// Recalcula la posición para la que la bomba se alinee con los ladrillos
+				int x = Math.round(position.x / 16) * 16;
+				int y = Math.round(position.y / 16) * 16;
+				
+				final Bomb bomb = new Bomb(ResourceManager.getTexture("bomb_idle"), x, y, 
+					bombLength, bombStrength, spriteManager);
+				spriteManager.bombs.add(bomb);
+				timeBeetwenBombs = 0;
+				activeBombs++;
+				
+				// Marca la bomba para explotar en 2 segundos y desaparecer en 3
+				Timer.schedule(new Task() {
+					public void run() {
+						bomb.explode();
+						activeBombs--;
+					}
+				}, 2);
+				Timer.schedule(new Task() {
+					public void run() {
+						bomb.die();
+					}
+				}, 2.5f);
+			}
 	}
 	
 	@Override
@@ -88,6 +171,7 @@ public class Player extends Character {
 		
 		super.update(dt);
 		
+		timeBeetwenBombs += dt;
 		stateTime += dt;
 		// Carga el frame según su posición y el momento del juego
 		switch (state) {
@@ -105,6 +189,9 @@ public class Player extends Character {
 			break;
 		case IDLE:
 			currentFrame = downAnimation.getKeyFrame(0, true);
+			break;
+		case EXPLODE:
+			currentFrame = explosionAnimation.getKeyFrame(stateTime, false);
 			break;
 		default:
 			currentFrame = downAnimation.getKeyFrame(0, true);
