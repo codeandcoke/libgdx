@@ -1,0 +1,553 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="200" height="80" tilewidth="16" tileheight="16">
+ <tileset firstgid="1" name="tileset" tilewidth="16" tileheight="16" spacing="2" margin="2">
+  <image source="tileset.jpg" trans="ff00ff" width="570" height="337"/>
+  <terraintypes>
+   <terrain name="Nuevo Terreno" tile="-1"/>
+  </terraintypes>
+  <tile id="24">
+   <properties>
+    <property name="blocked" value=""/>
+   </properties>
+  </tile>
+  <tile id="25">
+   <properties>
+    <property name="blocked" value=""/>
+   </properties>
+  </tile>
+  <tile id="55">
+   <properties>
+    <property name="blocked" value=""/>
+   </properties>
+  </tile>
+  <tile id="56">
+   <properties>
+    <property name="blocked" value=""/>
+   </properties>
+  </tile>
+  <tile id="109">
+   <properties>
+    <property name="blocked" value=""/>
+   </properties>
+  </tile>
+  <tile id="110">
+   <properties>
+    <property name="blocked" value=""/>
+   </properties>
+  </tile>
+  <tile id="111">
+   <properties>
+    <property name="blocked" value=""/>
+   </properties>
+  </tile>
+  <tile id="113">
+   <properties>
+    <property name="blocked" value="true"/>
+   </properties>
+  </tile>
+  <tile id="114">
+   <properties>
+    <property name="blocked" value="true"/>
+   </properties>
+  </tile>
+  <tile id="115">
+   <properties>
+    <property name="blocked" value="true"/>
+   </properties>
+  </tile>
+  <tile id="140">
+   <properties>
+    <property name="blocked" value=""/>
+   </properties>
+  </tile>
+  <tile id="142">
+   <properties>
+    <property name="blocked" value=""/>
+   </properties>
+  </tile>
+  <tile id="144">
+   <properties>
+    <property name="blocked" value="true"/>
+   </properties>
+  </tile>
+  <tile id="146">
+   <properties>
+    <property name="blocked" value="true"/>
+   </properties>
+  </tile>
+  <tile id="165">
+   <properties>
+    <property name="animation" value="box"/>
+    <property name="blocked" value="true"/>
+    <property name="box" value="true"/>
+   </properties>
+  </tile>
+  <tile id="166">
+   <properties>
+    <property name="animation" value="box"/>
+    <property name="blocked" value="true"/>
+    <property name="box" value="true"/>
+   </properties>
+  </tile>
+  <tile id="167">
+   <properties>
+    <property name="animation" value="box"/>
+    <property name="blocked" value="true"/>
+    <property name="box" value="true"/>
+   </properties>
+  </tile>
+  <tile id="168">
+   <properties>
+    <property name="animation" value="box"/>
+    <property name="blocked" value="true"/>
+    <property name="box" value="true"/>
+   </properties>
+  </tile>
+  <tile id="171">
+   <properties>
+    <property name="blocked" value=""/>
+   </properties>
+  </tile>
+  <tile id="172">
+   <properties>
+    <property name="blocked" value=""/>
+   </properties>
+  </tile>
+  <tile id="173">
+   <properties>
+    <property name="blocked" value=""/>
+   </properties>
+  </tile>
+  <tile id="175">
+   <properties>
+    <property name="blocked" value="true"/>
+   </properties>
+  </tile>
+  <tile id="176">
+   <properties>
+    <property name="blocked" value="true"/>
+   </properties>
+  </tile>
+  <tile id="177">
+   <properties>
+    <property name="blocked" value="true"/>
+   </properties>
+  </tile>
+  <tile id="196">
+   <properties>
+    <property name="animation" value="coin"/>
+    <property name="coin" value="true"/>
+   </properties>
+  </tile>
+  <tile id="197">
+   <properties>
+    <property name="animation" value="coin"/>
+    <property name="coin" value="true"/>
+   </properties>
+  </tile>
+  <tile id="198">
+   <properties>
+    <property name="animation" value="coin"/>
+    <property name="coin" value="true"/>
+   </properties>
+  </tile>
+  <tile id="199">
+   <properties>
+    <property name="animation" value="coin"/>
+    <property name="coin" value="true"/>
+   </properties>
+  </tile>
+  <tile id="200">
+   <properties>
+    <property name="animation" value="cloud"/>
+    <property name="blocked" value="true"/>
+   </properties>
+  </tile>
+  <tile id="202">
+   <properties>
+    <property name="blocked" value="true"/>
+   </properties>
+  </tile>
+  <tile id="203">
+   <properties>
+    <property name="blocked" value=""/>
+   </properties>
+  </tile>
+  <tile id="204">
+   <properties>
+    <property name="blocked" value=""/>
+   </properties>
+  </tile>
+  <tile id="231">
+   <properties>
+    <property name="blocked" value="true"/>
+    <property name="empty_box" value="true"/>
+   </properties>
+  </tile>
+  <tile id="233">
+   <properties>
+    <property name="blocked" value=""/>
+   </properties>
+  </tile>
+  <tile id="234">
+   <properties>
+    <property name="blocked" value=""/>
+   </properties>
+  </tile>
+  <tile id="235">
+   <properties>
+    <property name="blocked" value=""/>
+   </properties>
+  </tile>
+  <tile id="258">
+   <properties>
+    <property name="blocked" value="true"/>
+    <property name="type" value="brick"/>
+   </properties>
+  </tile>
+  <tile id="259">
+   <properties>
+    <property name="blocked" value="true"/>
+   </properties>
+  </tile>
+  <tile id="260">
+   <properties>
+    <property name="blocked" value="true"/>
+   </properties>
+  </tile>
+  <tile id="261">
+   <properties>
+    <property name="blocked" value="true"/>
+   </properties>
+  </tile>
+  <tile id="382">
+   <properties>
+    <property name="animation" value="water_up"/>
+   </properties>
+  </tile>
+  <tile id="383">
+   <properties>
+    <property name="animation" value="water_up"/>
+   </properties>
+  </tile>
+  <tile id="384">
+   <properties>
+    <property name="animation" value="water_up"/>
+   </properties>
+  </tile>
+  <tile id="385">
+   <properties>
+    <property name="animation" value="water_up"/>
+   </properties>
+  </tile>
+  <tile id="403">
+   <properties>
+    <property name="chest" value="true"/>
+   </properties>
+  </tile>
+  <tile id="404">
+   <properties>
+    <property name="chest" value="true"/>
+   </properties>
+  </tile>
+  <tile id="413">
+   <properties>
+    <property name="animation" value="water_down"/>
+   </properties>
+  </tile>
+  <tile id="414">
+   <properties>
+    <property name="animation" value="water_down"/>
+   </properties>
+  </tile>
+  <tile id="415">
+   <properties>
+    <property name="animation" value="water_down"/>
+   </properties>
+  </tile>
+  <tile id="416">
+   <properties>
+    <property name="animation" value="water_down"/>
+   </properties>
+  </tile>
+  <tile id="434">
+   <properties>
+    <property name="chest" value="true"/>
+   </properties>
+  </tile>
+  <tile id="435">
+   <properties>
+    <property name="chest" value="true"/>
+   </properties>
+  </tile>
+  <tile id="448">
+   <properties>
+    <property name="animation" value="plant"/>
+    <property name="enemy" value="true"/>
+   </properties>
+  </tile>
+  <tile id="449">
+   <properties>
+    <property name="animation" value="plant2"/>
+    <property name="enemy" value="true"/>
+   </properties>
+  </tile>
+  <tile id="455">
+   <properties>
+    <property name="blocked" value="true"/>
+   </properties>
+  </tile>
+  <tile id="456">
+   <properties>
+    <property name="blocked" value="true"/>
+   </properties>
+  </tile>
+  <tile id="457">
+   <properties>
+    <property name="blocked" value="true"/>
+   </properties>
+  </tile>
+  <tile id="479">
+   <properties>
+    <property name="animation" value="plant"/>
+    <property name="enemy" value="true"/>
+   </properties>
+  </tile>
+  <tile id="480">
+   <properties>
+    <property name="animation" value="plant2"/>
+    <property name="enemy" value="true"/>
+   </properties>
+  </tile>
+  <tile id="486">
+   <properties>
+    <property name="blocked" value="true"/>
+   </properties>
+  </tile>
+  <tile id="487">
+   <properties>
+    <property name="blocked" value="true"/>
+   </properties>
+  </tile>
+  <tile id="488">
+   <properties>
+    <property name="blocked" value="true"/>
+   </properties>
+  </tile>
+  <tile id="510">
+   <properties>
+    <property name="animation" value="plant"/>
+    <property name="enemy" value="true"/>
+   </properties>
+  </tile>
+  <tile id="511">
+   <properties>
+    <property name="animation" value="plant2"/>
+    <property name="enemy" value="true"/>
+   </properties>
+  </tile>
+ </tileset>
+ <tileset firstgid="559" name="enemy" tilewidth="13" tileheight="13">
+  <image source="../characters/enemy.png" width="14" height="13"/>
+  <tile id="0">
+   <properties>
+    <property name="enemy" value="true"/>
+   </properties>
+  </tile>
+ </tileset>
+ <layer name="terrain" width="200" height="80">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+2bP47UMBSHE9Eh7VJDhaigALEdVFvCKbaEc1DACaCn4gJwgR1pK9iLAIfAEYrG4/jPe85zktn5PumnWXYdx57xFzvO0HUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAYMW9/jRzv9tmYFsMY2UuN4JYnMeK0ZGzrn3Og5/PC+VhW5yiHwNLOYIfx82p+jGwhCMxP3KOwHqk1uKt6rU+TwtaOqKdO/BjPYYx4F+//Jw6rRyp8SP1GRG7hO95zg38+I+1I6l1VcmTtcfOKUTjBn7ssXTkrvtxs/BxlvVp3uut3heshZUjd9kPf99lieOs69O4gR9T5vpR68YQyV5gi6TG3dyyFsdZ1if1Y+v7Smti5ce3Tu/H2nPDltLq/SjVewz7rpZo+9pq/njcl/1Y6/s2W2jDkn2VuoEf8fK1boz7IaEfw+8v+8NrGPPHtpLyCQ6Z60cqVwI/lnAkdp6Xrm0Xvb6uJ5GceX+zbOMabtxFP+b2rfX6KueHxfiItaFU30+XXy63inNI2mf5/pX628IN/Igf38IP6foq9KTmuhtrSy6/Xf64/BX2z8qFtf2Q3K/AIa38kKyvUtf/2sTOMa6lrMazZWr6XbuOk97PHyut+jLXj9TnLNm/kl6r51yz/bXU2j6s5Ydmv+tYOTY/LhX1StYNtW0L11It56rWbgy5UJbX7gfDIa38uFL6URovc9s0qdu174FiD0s7lkt9qa1TOn9cK71Yw4/c+Uu/W6qtLddX2jpyY8ayriHPXfteCP0I65yUibg218dUpH7UuIEf8Ta28EOzvrLyQ3MN9+9LUs9DSn3MuRaWHcvUPnvR+FHrBuurKSU/nro8E7yG42Hcv6r1qzTWJeuXXMb7ktSzEKmDoWuxMuPfYwnPW3Ij58duhhf4EafkxxuXt4LXYb27866L0v0riRvhmC+5oZlrYp7E9oT9NoTfxfT3AHIuxpI6psaPuW7gx5SSH+9c3gteH7o86vaf1aXAD826osYPzbOPmCea9Z/fRm3fLGLhBn5MKfnx0eWT4PWVy+tuPyal37+SZpifrj3ndsF8Nf7dP6bm2Ufs2frB+E/cZ4dO1F4HtKndp8IPGaXxkls7S6IZm7mE81Pu37mxrklszgjvxSVzxllQzvdscs6Ef63nDfyII72e1iY2Nj+7z+FLL1v/jGXG+WkcF7l/W/iYWk+V7sVLnow/p/azxt9L2mbtxr1+Pw/nsiskLH/MSMbK3P8bGtb33b1nP/ry+qdm7vLH7UWXft5c48aQ2L14rFzOF02/biPHt/CiZY4Zi2utJr4TpfVPzdzlf49Ech2fk5JLqXKafsX2t9Ye7/jRLr4TH3pC7PJ1A22w7g8hJJ5/IATFCgD6AAA=
+  </data>
+ </layer>
+ <objectgroup name="objects" width="200" height="80">
+  <object gid="201" x="1648" y="894">
+   <properties>
+    <property name="mobile" value=""/>
+    <property name="offset" value="40"/>
+    <property name="right_direction" value="true"/>
+   </properties>
+  </object>
+  <object gid="201" x="1694" y="942">
+   <properties>
+    <property name="mobile" value=""/>
+    <property name="offset" value="30"/>
+    <property name="right_direction" value="false"/>
+   </properties>
+  </object>
+  <object gid="201" x="1760" y="914">
+   <properties>
+    <property name="mobile" value=""/>
+    <property name="offset" value="50"/>
+    <property name="right_direction" value="false"/>
+   </properties>
+  </object>
+  <object gid="201" x="1771" y="1011">
+   <properties>
+    <property name="mobile" value=""/>
+    <property name="offset" value="200"/>
+    <property name="right_direction" value="true"/>
+   </properties>
+  </object>
+  <object gid="201" x="1844" y="954">
+   <properties>
+    <property name="mobile" value=""/>
+    <property name="offset" value="80"/>
+    <property name="right_direction" value="false"/>
+   </properties>
+  </object>
+  <object gid="201" x="1865" y="884">
+   <properties>
+    <property name="mobile" value=""/>
+    <property name="offset" value="100"/>
+    <property name="right_direction" value="false"/>
+   </properties>
+  </object>
+  <object gid="201" x="1796" y="838">
+   <properties>
+    <property name="mobile" value=""/>
+    <property name="offset" value="200"/>
+    <property name="right_direction" value="true"/>
+   </properties>
+  </object>
+  <object gid="201" x="1923" y="953">
+   <properties>
+    <property name="mobile" value=""/>
+    <property name="offset" value="300"/>
+    <property name="right_direction" value="true"/>
+   </properties>
+  </object>
+  <object gid="201" x="1885" y="1032">
+   <properties>
+    <property name="mobile" value=""/>
+    <property name="offset" value="200"/>
+    <property name="right_direction" value="true"/>
+   </properties>
+  </object>
+  <object gid="201" x="1954" y="1046">
+   <properties>
+    <property name="mobile" value=""/>
+    <property name="offset" value="120"/>
+    <property name="right_direction" value="false"/>
+   </properties>
+  </object>
+  <object gid="201" x="1998" y="992">
+   <properties>
+    <property name="mobile" value=""/>
+    <property name="offset" value="100"/>
+    <property name="right_direction" value="true"/>
+   </properties>
+  </object>
+  <object gid="201" x="1990" y="922">
+   <properties>
+    <property name="mobile" value=""/>
+    <property name="offset" value="100"/>
+    <property name="right_direction" value="true"/>
+   </properties>
+  </object>
+  <object gid="201" x="432" y="1120">
+   <properties>
+    <property name="mobile" value=""/>
+    <property name="offset" value="30"/>
+    <property name="right_direction" value="true"/>
+   </properties>
+  </object>
+  <object gid="201" x="641" y="1136">
+   <properties>
+    <property name="mobile" value=""/>
+    <property name="offset" value="100"/>
+    <property name="right_direction" value="true"/>
+   </properties>
+  </object>
+  <object gid="201" x="49" y="1198">
+   <properties>
+    <property name="mobile" value=""/>
+    <property name="offset" value="60"/>
+    <property name="right_direction" value="true"/>
+   </properties>
+  </object>
+  <object gid="201" x="125" y="1155">
+   <properties>
+    <property name="mobile" value=""/>
+    <property name="offset" value="160"/>
+    <property name="right_direction" value="true"/>
+   </properties>
+  </object>
+  <object gid="559" x="1521" y="953">
+   <properties>
+    <property name="enemy" value=""/>
+   </properties>
+  </object>
+  <object gid="559" x="1491" y="972">
+   <properties>
+    <property name="enemy" value=""/>
+   </properties>
+  </object>
+  <object gid="559" x="1460" y="997">
+   <properties>
+    <property name="enemy" value=""/>
+   </properties>
+  </object>
+  <object gid="559" x="1439" y="1017">
+   <properties>
+    <property name="enemy" value=""/>
+   </properties>
+  </object>
+  <object gid="559" x="1427" y="911">
+   <properties>
+    <property name="enemy" value=""/>
+   </properties>
+  </object>
+  <object gid="559" x="1473" y="858">
+   <properties>
+    <property name="enemy" value=""/>
+   </properties>
+  </object>
+  <object gid="559" x="433" y="1036">
+   <properties>
+    <property name="enemy" value=""/>
+   </properties>
+  </object>
+  <object gid="559" x="221" y="1214">
+   <properties>
+    <property name="enemy" value=""/>
+   </properties>
+  </object>
+  <object gid="559" x="281" y="1213"/>
+  <object gid="559" x="592" y="1131">
+   <properties>
+    <property name="enemy" value=""/>
+   </properties>
+  </object>
+  <object gid="559" x="1042" y="1118">
+   <properties>
+    <property name="enemy" value=""/>
+   </properties>
+  </object>
+  <object gid="559" x="1169" y="1214">
+   <properties>
+    <property name="enemy" value=""/>
+   </properties>
+  </object>
+  <object gid="201" x="2657" y="1229">
+   <properties>
+    <property name="mobile" value=""/>
+    <property name="offset" value="150"/>
+    <property name="right_direction" value="true"/>
+   </properties>
+  </object>
+  <object gid="201" x="2816" y="1247">
+   <properties>
+    <property name="mobile" value=""/>
+    <property name="offset" value="230"/>
+    <property name="right_direction" value="true"/>
+   </properties>
+  </object>
+  <object gid="559" x="3005" y="949"/>
+  <object gid="559" x="2000" y="806"/>
+  <object gid="559" x="1978" y="809"/>
+  <object gid="559" x="1950" y="808"/>
+  <object gid="559" x="1926" y="811"/>
+  <object gid="559" x="1899" y="811"/>
+ </objectgroup>
+</map>
