@@ -15,10 +15,9 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Vector2;
 
 /**
- * Clase principal del proyecto principal del juego
- * 
+ * Clase principal del proyecto
  * @author Santiago Faci
- *
+ * @version 1.0
  */
 public class Frogger extends Game {
 
@@ -30,15 +29,14 @@ public class Frogger extends Game {
 	Cocodrile cocodrile;
 	
 	/*
-	 * MÈtodo invocado en el momento de crearse la aplicaciÛn
-	 * @see com.badlogic.gdx.ApplicationListener#create()
+	 * M√©todo invocado en el momento de crearse la aplicaci√≥n
 	 */
 	@Override
 	public void create() {
 		spriteBatch = new SpriteBatch();
 		fuente = new BitmapFont();
 		
-		// Crea la c·mara y define la zona de visiÛn del juego (toda la pantalla)
+		// Crea la c√°mara y define la zona de visi√≥n del juego (toda la pantalla)
 		camera = new OrthographicCamera();
 		camera.setToOrtho(false, Constants.SCREEN_WIDTH, Constants.SCREEN_HEIGHT);
 		camera.update();
@@ -49,10 +47,10 @@ public class Frogger extends Game {
 		cocodrile = new Cocodrile(0, Constants.SCREEN_HEIGHT / 2);
 	}
 
-	/*
-	 * MÈtodo que se invoca cada vez que hay que renderizar
-	 * Es el mÈtodo donde se actualiza tambiÈn la lÛgica del juego
-	 * @see com.badlogic.gdx.ApplicationListener#pause()
+	/* M√©todo principal del juego para renderizado y l√≥gica
+	 * Es el m√©todo principal del juego, y es invocado autom√°ticamente
+	 * por el motor libGDX de forma continuada
+	 * Desde aqu√≠ se har√°n las llamadas a todas las cosas que queremos que ocurran
 	 */
 	@Override
 	public void render() {
@@ -72,7 +70,11 @@ public class Frogger extends Game {
 		cocodrile.render(spriteBatch);
 		spriteBatch.end();
 	}
-	
+
+    /**
+     * Controla la entrada por teclado del usuario
+     * @param dt
+     */
 	private void handleInput(float dt) {
 		
 		if (Gdx.input.isKeyPressed(Keys.LEFT)) {
@@ -94,7 +96,11 @@ public class Frogger extends Game {
 		else 
 			frog.state = Frog.State.IDLE;
 	}
-	
+
+    /**
+     * Actualiza los personajes del juego
+     * @param dt
+     */
 	private void update(float dt) {
 		
 		frog.update(dt);
@@ -102,15 +108,12 @@ public class Frogger extends Game {
 	}
 	
 	/*
-	 * MÈtodo invocado cuando se destruye la aplicaciÛn
+	 * M√©todo invocado cuando se destruye la aplicaci√≥n
 	 * Siempre va precedido de una llamada a 'pause()'
-	 * @see com.badlogic.gdx.ApplicationListener#dispose()
 	 */
 	@Override
 	public void dispose() {
 		spriteBatch.dispose();
 		fuente.dispose();
 	}
-	
-	
 }

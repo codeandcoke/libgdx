@@ -1,17 +1,14 @@
 package org.sfsoft.frogger.characters;
 
+import com.badlogic.gdx.graphics.g2d.*;
 import org.sfsoft.frogger.util.Constants;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
-import com.badlogic.gdx.graphics.g2d.Animation;
-import com.badlogic.gdx.graphics.g2d.Sprite;
-import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.math.Vector2;
 
 /**
- * Clase que representa la rana del juego
+ * Clase que representa el cocodrilo
  * @author Santiago Faci
  * @version 1.0
  *
@@ -30,12 +27,12 @@ public class Cocodrile {
 		
 		position = new Vector2(x, y);
 		
-		// Carga la animación
-		animation = new Animation(0.25f, new TextureRegion[]{
-				new Sprite(new Texture(Gdx.files.internal("cocodrile1.png"))), new Sprite(new Texture(Gdx.files.internal("cocodrile2.png")))});
+		// Carga la animaciÃ³n
+        TextureAtlas atlas = new TextureAtlas(Gdx.files.internal("animaciones.pack"));
+        animation = new Animation(0.25f, atlas.findRegions("cocodrile"));
 	}
 	
-	// Desplaza la tabla en el eje x
+	// Desplaza el personaje en el eje x
 	public void move(Vector2 movement) {
 
 		movement.scl(SPEED);
@@ -49,13 +46,13 @@ public class Cocodrile {
 	
 	public void update(float dt) {
 		
-		// Calcula el tiempo para cargar el frame que proceda de la animación
+		// Calcula el tiempo para cargar el frame que proceda de la animaciÃ³n
 		stateTime += dt;
 		currentFrame = animation.getKeyFrame(stateTime, true);
 		
 		move(new Vector2(dt, 0));
 		
-		// Comprueba los límites de la pantalla
+		// Comprueba los lÃ­mites de la pantalla
 		if (position.x > Constants.SCREEN_WIDTH + currentFrame.getRegionWidth())
 			position.x = 0 - currentFrame.getRegionWidth();
 	}

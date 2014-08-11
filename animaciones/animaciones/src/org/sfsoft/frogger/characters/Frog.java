@@ -1,13 +1,10 @@
 package org.sfsoft.frogger.characters;
 
+import com.badlogic.gdx.graphics.g2d.*;
 import org.sfsoft.frogger.util.Constants;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
-import com.badlogic.gdx.graphics.g2d.Animation;
-import com.badlogic.gdx.graphics.g2d.Sprite;
-import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.math.Vector2;
 
 /**
@@ -42,15 +39,11 @@ public class Frog {
 		this.lives = lives;
 		state = State.IDLE;
 		
-		// Carga las animaciones para cada dirección
-		rightAnimation = new Animation(0.25f, new TextureRegion[]{
-			new Sprite(new Texture(Gdx.files.internal("frog_right1.png"))), new Sprite(new Texture(Gdx.files.internal("frog_right2.png")))});
-		leftAnimation = new Animation(0.25f, new TextureRegion[]{
-				new Sprite(new Texture(Gdx.files.internal("frog_left1.png"))), new Sprite(new Texture(Gdx.files.internal("frog_left2.png")))});
-		upAnimation = new Animation(0.25f, new TextureRegion[]{
-				new Sprite(new Texture(Gdx.files.internal("frog_up1.png"))), new Sprite(new Texture(Gdx.files.internal("frog_up2.png")))});
-		downAnimation = new Animation(0.25f, new TextureRegion[]{
-				new Sprite(new Texture(Gdx.files.internal("frog_down1.png"))), new Sprite(new Texture(Gdx.files.internal("frog_down2.png")))});
+		// Carga las animaciones para cada direcciÃ³n
+		rightAnimation = new Animation(0.25f, new TextureAtlas(Gdx.files.internal("animaciones.pack")).findRegions("frog_right"));
+		leftAnimation = new Animation(0.25f, new TextureAtlas(Gdx.files.internal("animaciones.pack")).findRegions("frog_left"));
+		upAnimation = new Animation(0.25f, new TextureAtlas(Gdx.files.internal("animaciones.pack")).findRegions("frog_up"));
+		downAnimation = new Animation(0.25f, new TextureAtlas(Gdx.files.internal("animaciones.pack")).findRegions("frog_down"));
 	}
 	
 	// Desplaza la tabla en el eje x
@@ -67,10 +60,10 @@ public class Frog {
 	
 	public void update(float dt) {
 		
-		// Calcula el tiempo para cargar el frame que proceda de la animación
+		// Calcula el tiempo para cargar el frame que proceda de la animaciÃ³n
 		stateTime += dt;
 		
-		// Carga el frame según su posición y el momento del juego
+		// Carga el frame segÃºn su posiciÃ³n y el momento del juego
 		switch (state) {
 		case RIGHT:
 			currentFrame = rightAnimation.getKeyFrame(stateTime, true);
@@ -91,7 +84,7 @@ public class Frog {
 			currentFrame = upAnimation.getKeyFrame(0, true);
 		}
 			
-		// Comprueba los límites de la pantalla
+		// Comprueba los lÃ­mites de la pantalla
 		if (position.x <= 0)
 			position.x = 0;
 		

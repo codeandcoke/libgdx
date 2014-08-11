@@ -8,7 +8,10 @@ import com.badlogic.gdx.backends.lwjgl.LwjglApplicationConfiguration;
 
 /**
  * Clase principal de la versión de escritorio (PC) del juego
+ * Esta clase hace de lanzadora (para la versión de PC en este caso)
+ * del proyecto principal
  * @author Santiago Faci
+ * @version 1.0
  *
  */
 public class DesktopFrogger {
