@@ -57,7 +57,11 @@ public class Frog {
 		
 		batch.draw(currentFrame, position.x, position.y);
 	}
-	
+
+    /**
+     * Actualiza el estado del personaje
+     * @param dt
+     */
 	public void update(float dt) {
 		
 		// Calcula el tiempo para cargar el frame que proceda de la animación
