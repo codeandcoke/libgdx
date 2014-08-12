@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/drop/drop.iml" filepath="$PROJECT_DIR$/drop/drop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/drop-android/drop-android.iml" filepath="$PROJECT_DIR$/drop-android/drop-android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/drop-desktop/drop-desktop.iml" filepath="$PROJECT_DIR$/drop-desktop/drop-desktop.iml" />
+    </modules>
+  </component>
+</project>
+

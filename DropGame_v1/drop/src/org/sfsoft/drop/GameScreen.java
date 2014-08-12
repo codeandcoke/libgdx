@@ -19,6 +19,7 @@ import com.badlogic.gdx.utils.TimeUtils;
 /**
  * Pantalla del juego, donde el usuario juega la partida
  * @author Santiago Faci
+ * @version 1.0
  *
  */
 public class GameScreen implements Screen {
@@ -39,7 +40,7 @@ public class GameScreen implements Screen {
 	public GameScreen(Drop juego) {
 		this.juego = juego;
 		
-		// Carga las im·genes del juego
+		// Carga las im√°genes del juego
 		spriteGota = new Texture(Gdx.files.internal("droplet.png"));
 		spriteCubo = new Texture(Gdx.files.internal("bucket.png"));
 		
@@ -47,7 +48,7 @@ public class GameScreen implements Screen {
 		sonidoGota = Gdx.audio.newSound(Gdx.files.internal("waterdrop.wav"));
 		musicaLluvia = Gdx.audio.newMusic(Gdx.files.internal("undertreeinrain.mp3"));
 		
-		// Inicia la m˙sica de fondo del juego en modo bucle
+		// Inicia la m√≠sica de fondo del juego en modo bucle
 		musicaLluvia.setLooping(true);
 		
 		// Representa el cubo en el juego
@@ -73,12 +74,12 @@ public class GameScreen implements Screen {
 		// Limpia la pantalla
 		Gdx.gl.glClear(GL10.GL_COLOR_BUFFER_BIT);
 		
-		// Actualiza la c·mara
+		// Actualiza la c√°mara
 		camara.update();
 		
-		// Pinta la im·genes del juego en la pantalla
+		// Pinta la im√°genes del juego en la pantalla
 		/* setProjectionMatrix hace que el objeto utilice el 
-		 * sistema de coordenadas de la c·mara, que 
+		 * sistema de coordenadas de la c√°mara, que
 		 * es ortogonal
 		 * Es recomendable pintar todos los elementos del juego
 		 * entras las mismas llamadas a begin() y end()
@@ -98,8 +99,8 @@ public class GameScreen implements Screen {
 			Vector3 posicion = new Vector3();
 			posicion.set(Gdx.input.getX(), Gdx.input.getY(), 0);
 			/*
-			 * Transforma las coordenadas de la posiciÛn
-			 * al sistema de coordenadas de la c·mara
+			 * Transforma las coordenadas de la posici√≥n
+			 * al sistema de coordenadas de la c√°mara
 			 */
 			camara.unproject(posicion);
 			cubo.x = posicion.x - 64 /2;
@@ -115,7 +116,7 @@ public class GameScreen implements Screen {
 		
 		/*
 		 * Comprueba que el cubo no se salga de los
-		 * lÌmites de la pantalla
+		 * l√≠mites de la pantalla
 		 */
 		if (cubo.x < 0)
 			cubo.x = 0;
@@ -124,7 +125,7 @@ public class GameScreen implements Screen {
 		
 		/*
 		 * Genera nuevas gotas dependiendo del tiempo que ha
-		 * pasado desde la ˙ltima
+		 * pasado desde la √∫ltima
 		 */
 		if (TimeUtils.nanoTime() - momentoUltimaGota > 100000000)
 			generarLluvia();
@@ -149,7 +150,7 @@ public class GameScreen implements Screen {
 	}
 	
 	/**
-	 * Genera una gota de lluvia en una posiciÛn aleatoria
+	 * Genera una gota de lluvia en una posici√≥n aleatoria
 	 * de la pantalla y anota el momento de generarse
 	 */
 	private void generarLluvia() {
@@ -163,8 +164,8 @@ public class GameScreen implements Screen {
 	}
 	
 	/*
-	 * MÈtodo que se invoca cuando esta pantalla es
-	 * la que se est· mostrando
+	 * M√©todo que se invoca cuando esta pantalla es
+	 * la que se est√° mostrando
 	 * @see com.badlogic.gdx.Screen#show()
 	 */
 	@Override
@@ -173,7 +174,7 @@ public class GameScreen implements Screen {
 	}
 
 	/*
-	 * MÈtodo que se invoca cuando est· pantalla
+	 * M√©todo que se invoca cuando esta pantalla
 	 * deja de ser la principal
 	 * @see com.badlogic.gdx.Screen#hide()
 	 */
