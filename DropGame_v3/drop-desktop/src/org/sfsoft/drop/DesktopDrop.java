@@ -1,13 +1,12 @@
 package org.sfsoft.drop;
 
-import org.sfsoft.drop.Drop;
-
 import com.badlogic.gdx.backends.lwjgl.LwjglApplication;
 import com.badlogic.gdx.backends.lwjgl.LwjglApplicationConfiguration;
 
 /**
- * Clase principal de la versión de escritorio (PC) del juego
+ * Clase principal de la versiÃ³n de escritorio (PC) del juego
  * @author Santiago Faci
+ * @version 3.0
  *
  */
 public class DesktopDrop {

@@ -9,24 +9,25 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
  * Clase principal del proyecto principal del juego
  * 
  * Ejemplo de juego de la Wiki oficial de libgdx (https://github.com/libgdx/libgdx/wiki/A-simple-game)
- * Los recursos utilizados son propiedad de sus respectivos dueños:
+ * Los recursos utilizados son propiedad de sus respectivos dueÃ±os:
  * audio waterdrop.wav, de junggle (http://www.freesound.org/people/junggle/sounds/30341/)
  * audio undertreeinrain.mp3, de acclivity (http://www.freesound.org/people/acclivity/sounds/28283/)
  * sprite droplet.png, de mvdv (https://www.box.com/s/peqrdkwjl6guhpm48nit)
  * sprite bucket.png sprite, de mvdv (https://www.box.com/s/605bvdlwuqubtutbyf4x )
  * 
  * @author Santiago Faci
+ * @version 3.0
  *
  */
 public class Drop extends Game {
 
 	OrthographicCamera camara;
-	SpriteBatch spriteBatch;
-	BitmapFont fuente;
-	int gotasRecogidas;
+	public SpriteBatch spriteBatch;
+	public BitmapFont fuente;
+	public int gotasRecogidas;
 	
 	/*
-	 * Método invocado en el momento de crearse la aplicación
+	 * MÃ©todo invocado en el momento de crearse la aplicaciÃ³n
 	 * @see com.badlogic.gdx.ApplicationListener#create()
 	 */
 	@Override
@@ -37,8 +38,8 @@ public class Drop extends Game {
 	}
 
 	/*
-	 * Método que se invoca cada vez que hay que renderizar
-	 * Es el método donde se actualiza también la lógica del juego
+	 * MÃ©todo que se invoca cada vez que hay que renderizar
+	 * Es el mÃ©todo donde se actualiza tambiÃ©n la lÃ³gica del juego
 	 * @see com.badlogic.gdx.ApplicationListener#pause()
 	 */
 	@Override
@@ -47,7 +48,7 @@ public class Drop extends Game {
 	}
 	
 	/*
-	 * Método invocado cuando se destruye la aplicación
+	 * MÃ©todo invocado cuando se destruye la aplicaciÃ³n
 	 * Siempre va precedido de una llamada a 'pause()'
 	 * @see com.badlogic.gdx.ApplicationListener#dispose()
 	 */
@@ -56,6 +57,4 @@ public class Drop extends Game {
 		spriteBatch.dispose();
 		fuente.dispose();
 	}
-	
-	
 }

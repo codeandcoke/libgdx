@@ -8,8 +8,9 @@ import com.badlogic.gdx.graphics.OrthographicCamera;
 
 /**
  * Pantalla de inicio
- * Se presenta el menú de juego
+ * Se presenta el menÃº de juego
  * @author Santiago Faci
+ * @version 3.0
  *
  */
 public class MainMenuScreen implements Screen {
@@ -34,7 +35,7 @@ public class MainMenuScreen implements Screen {
 		camara.update();
 		juego.spriteBatch.setProjectionMatrix(camara.combined);
 		
-		// Muestra un menú de inicio
+		// Muestra un menÃº de inicio
 		juego.spriteBatch.begin();
 		juego.fuente.draw(juego.spriteBatch, "Bienvenido a Drop!!!!", 100, 150);
 		juego.fuente.draw(juego.spriteBatch, "Pulsa para empezar", 100, 130);

@@ -1,7 +1,5 @@
 package org.sfsoft.drop;
 
-import org.sfsoft.drop.Drop;
-
 import com.badlogic.gdx.backends.lwjgl.LwjglApplication;
 import com.badlogic.gdx.backends.lwjgl.LwjglApplicationConfiguration;
 

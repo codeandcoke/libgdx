@@ -1,17 +1,12 @@
 package org.sfsoft.drop;
 
-import org.sfsoft.drop.Drop;
-
 import com.badlogic.gdx.backends.android.AndroidApplication;
 import com.badlogic.gdx.backends.android.AndroidApplicationConfiguration;
 
-import android.os.Bundle;
-import android.app.Activity;
-import android.view.Menu;
-
 /**
- * Clase principal para la versión Android del proyecto
+ * Clase principal para la versiÃ³n Android del proyecto
  * @author Santiago Faci
+ * @version 3.0
  *
  */
 public class AndroidDrop extends AndroidApplication {
