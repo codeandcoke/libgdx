@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="dexedLibs">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/drop-android/bin/dexedLibs/gdx-9b29c8665dfb255711144efd86c1c7cd.jar!/" />
+      <root url="jar://$PROJECT_DIR$/drop-android/bin/dexedLibs/android-support-v4-e65ba7d2e9fa4a1908cfc57bf105037e.jar!/" />
+      <root url="jar://$PROJECT_DIR$/drop-android/bin/dexedLibs/gdx-backend-android-767fe3a0159599126ce162aec761fab4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/drop-android/bin/dexedLibs/gdx-backend-android-a303b6e3204e62a88d6410e95eac8aaf.jar!/" />
+      <root url="jar://$PROJECT_DIR$/drop-android/bin/dexedLibs/annotations-ee15cc6673b9aa18ae2360f094fd2d44.jar!/" />
+      <root url="jar://$PROJECT_DIR$/drop-android/bin/dexedLibs/android-support-v4-9249449063d3a3044063f9686b36d895.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -11,8 +11,9 @@ import com.badlogic.gdx.scenes.scene2d.ui.TextField;
 
 /**
  * Pantalla de fin de partida. Se muestra cuando el usuario termina una partida
- * Se presenta un menú de juego
+ * Se presenta un menÃº de juego
  * @author Santiago Faci
+ * @version 2.0
  *
  */
 public class GameOverScreen implements Screen {
@@ -41,10 +42,10 @@ public class GameOverScreen implements Screen {
 		camara.update();
 		juego.spriteBatch.setProjectionMatrix(camara.combined);
 		
-		// Muestra un menú de inicio
+		// Muestra un menÃº de inicio
 		juego.spriteBatch.begin();
 		juego.fuente.draw(juego.spriteBatch, "Fin del juego!!!!", 100, 150);
-		juego.fuente.draw(juego.spriteBatch, "Tu puntuación: " + juego.gotasRecogidas, 100, 130);
+		juego.fuente.draw(juego.spriteBatch, "Tu puntuaciï¿½n: " + juego.gotasRecogidas, 100, 130);
 		juego.fuente.draw(juego.spriteBatch, "Si quieres jugar otra partida pulsa la tecla 'N'", 100, 110);
 		juego.fuente.draw(juego.spriteBatch, "Pulsa 'ESCAPE' para SALIR", 100, 90);
 		juego.spriteBatch.end();
@@ -54,7 +55,7 @@ public class GameOverScreen implements Screen {
 		 */
 		if (Gdx.input.isKeyPressed(Keys.N)) {
 			/*
-			 * Aquí habrá que reiniciar algunos aspectos del
+			 * AquÃ­ habrÃ¡ que reiniciar algunos aspectos del
 			 * juego de cara a empezar una nueva partida
 			 */
 			juego.gotasRecogidas = 0;

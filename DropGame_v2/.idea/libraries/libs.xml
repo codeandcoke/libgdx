@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="libs">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/drop-desktop/libs/gdx-backend-lwjgl-natives.jar!/" />
+      <root url="jar://$PROJECT_DIR$/drop-desktop/libs/gdx-backend-lwjgl.jar!/" />
+      <root url="jar://$PROJECT_DIR$/drop-desktop/libs/gdx-natives.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

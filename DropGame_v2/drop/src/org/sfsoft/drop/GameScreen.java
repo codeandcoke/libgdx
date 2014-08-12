@@ -22,13 +22,14 @@ import com.badlogic.gdx.utils.Timer.Task;
 /**
  * Pantalla del juego, donde el usuario juega la partida
  * @author Santiago Faci
+ * @version 2.0
  *
  */
 public class GameScreen implements Screen, InputProcessor {
 
 	final Drop juego;
 	
-	// Texturas e im·genes para los elementos del juego
+	// Texturas e im√°genes para los elementos del juego
 	Texture spriteGota;
 	Texture spriteCubo;
 	Texture spriteRoca;
@@ -37,7 +38,7 @@ public class GameScreen implements Screen, InputProcessor {
 	Sound sonidoRoca;
 	
 	/*
-	 * RepresentaciÛn de los elementos del juego como rect·ngulos
+	 * Representaci√≥ den los elementos del juego como rect√°ngulos
 	 * Se utilizan para comprobar las colisiones entre los mismos
 	 */
 	Rectangle cubo;
@@ -49,7 +50,7 @@ public class GameScreen implements Screen, InputProcessor {
 	long momentoUltimaRoca;
 	float tiempoJuego;
 	
-	// Indica si el juego est· en pausa
+	// Indica si el juego est√° en pausa
 	boolean pausa = false;
 	
 	OrthographicCamera camara;
@@ -57,10 +58,10 @@ public class GameScreen implements Screen, InputProcessor {
 	public GameScreen(Drop juego) {
 		this.juego = juego;
 		
-		// DuraciÛn fija de la partida
+		// Duraci√≥n fija de la partida
 		tiempoJuego = 50;
 		
-		// Carga las im·genes del juego
+		// Carga las im√°genes del juego
 		spriteGota = new Texture(Gdx.files.internal("droplet.png"));
 		spriteCubo = new Texture(Gdx.files.internal("bucket.png"));
 		spriteRoca = new Texture(Gdx.files.internal("rock.png"));
@@ -70,7 +71,7 @@ public class GameScreen implements Screen, InputProcessor {
 		musicaLluvia = Gdx.audio.newMusic(Gdx.files.internal("undertreeinrain.mp3"));
 		sonidoRoca = Gdx.audio.newSound(Gdx.files.internal("rock.mp3"));
 		
-		// Inicia la m˙sica de fondo del juego en modo bucle
+		// Inicia la m√∫sica de fondo del juego en modo bucle
 		musicaLluvia.setLooping(true);
 		
 		// Representa el cubo en el juego
@@ -89,7 +90,7 @@ public class GameScreen implements Screen, InputProcessor {
 		rocas = new Array<Rectangle>();
 		lanzarRoca();
 		
-		// Crea la c·mara y define la zona de visiÛn del juego (toda la pantalla)
+		// Crea la c√°mara y define la zona de visi√≥n del juego (toda la pantalla)
 		camara = new OrthographicCamera();
 		camara.setToOrtho(false, 1024, 768);
 		
@@ -103,23 +104,23 @@ public class GameScreen implements Screen, InputProcessor {
 		// Limpia la pantalla
 		Gdx.gl.glClear(GL10.GL_COLOR_BUFFER_BIT);
 		
-		// Actualiza la c·mara
+		// Actualiza la c√°mara
 		camara.update();
 		
 		/* Comprueba la entrada del usuario, actualiza
-		 * la posiciÛn de los elementos del juego y
+		 * la posici√≥n de los elementos del juego y
 		 * dibuja en pantalla
 		 */
 		if (!pausa) {
 			comprobarInput();
 			actualizar();
 		}
-		// La pantalla debe se redibujada aunque el juego estÈ pausado
+		// La pantalla debe se redibujada aunque el juego est√° pausado
 		dibujar();
 	}
 	
 	/*
-	 * Comprueba la entrada del usuario (teclado o pantalla si est· en el mÛvil)
+	 * Comprueba la entrada del usuario (teclado o pantalla si est√° en el m√≥vil)
 	 */
 	private void comprobarInput() {
 		
@@ -130,8 +131,8 @@ public class GameScreen implements Screen, InputProcessor {
 			Vector3 posicion = new Vector3();
 			posicion.set(Gdx.input.getX(), Gdx.input.getY(), 0);
 			/*
-			 * Transforma las coordenadas de la posiciÛn
-			 * al sistema de coordenadas de la c·mara
+			 * Transforma las coordenadas de la posici√≥n
+			 * al sistema de coordenadas de la c√°mara
 			 */
 			//camara.unproject(posicion);
 			cubo.x = posicion.x - 64 /2;
@@ -147,14 +148,14 @@ public class GameScreen implements Screen, InputProcessor {
 	}
 	
 	/*
-	 * Actualiza la posiciÛn de todos los elementos
+	 * Actualiza la posici√≥n de todos los elementos
 	 * del juego
 	 */
 	private void actualizar() {
 			
 		/*
 		 * Comprueba que el cubo no se salga de los
-		 * lÌmites de la pantalla
+		 * l√≠mites de la pantalla
 		 */
 		if (cubo.x < 0)
 			cubo.x = 0;
@@ -163,7 +164,7 @@ public class GameScreen implements Screen, InputProcessor {
 		
 		/*
 		 * Genera nuevas gotas dependiendo del tiempo que ha
-		 * pasado desde la ˙ltima
+		 * pasado desde la √∫ltima
 		 */
 		if (TimeUtils.nanoTime() - momentoUltimaGota > 100000000)
 			generarLluvia();
@@ -232,9 +233,9 @@ public class GameScreen implements Screen, InputProcessor {
 	 */
 	private void dibujar() {
 		
-		// Pinta la im·genes del juego en la pantalla
+		// Pinta la im√°genes del juego en la pantalla
 		/* setProjectionMatrix hace que el objeto utilice el 
-		 * sistema de coordenadas de la c·mara, que 
+		 * sistema de coordenadas de la c√°mara, que
 		 * es ortogonal
 		 * Es recomendable pintar todos los elementos del juego
 		 * entras las mismas llamadas a begin() y end()
@@ -252,7 +253,7 @@ public class GameScreen implements Screen, InputProcessor {
 	}
 	
 	/**
-	 * Genera una gota de lluvia en una posiciÛn aleatoria
+	 * Genera una gota de lluvia en una posici√≥n aleatoria
 	 * de la pantalla y anota el momento de generarse
 	 */
 	private void generarLluvia() {
@@ -280,8 +281,8 @@ public class GameScreen implements Screen, InputProcessor {
 	}
 	
 	/*
-	 * MÈtodo que se invoca cuando esta pantalla es
-	 * la que se est· mostrando
+	 * M√©todo que se invoca cuando esta pantalla es
+	 * la que se est√° mostrando
 	 * @see com.badlogic.gdx.Screen#show()
 	 */
 	@Override
@@ -290,7 +291,7 @@ public class GameScreen implements Screen, InputProcessor {
 	}
 
 	/*
-	 * MÈtodo que se invoca cuando est· pantalla
+	 * M√©todo que se invoca cuando esta pantalla
 	 * deja de ser la principal
 	 * @see com.badlogic.gdx.Screen#hide()
 	 */
@@ -329,7 +330,6 @@ public class GameScreen implements Screen, InputProcessor {
 
 	@Override
 	public boolean keyDown(int keycode) {
-		// TODO Auto-generated method stub
 		return false;
 	}
 
@@ -344,37 +344,31 @@ public class GameScreen implements Screen, InputProcessor {
 
 	@Override
 	public boolean keyTyped(char character) {
-		// TODO Auto-generated method stub
 		return false;
 	}
 
 	@Override
 	public boolean touchDown(int screenX, int screenY, int pointer, int button) {
-		// TODO Auto-generated method stub
 		return false;
 	}
 
 	@Override
 	public boolean touchUp(int screenX, int screenY, int pointer, int button) {
-		// TODO Auto-generated method stub
 		return false;
 	}
 
 	@Override
 	public boolean touchDragged(int screenX, int screenY, int pointer) {
-		// TODO Auto-generated method stub
 		return false;
 	}
 
 	@Override
 	public boolean mouseMoved(int screenX, int screenY) {
-		// TODO Auto-generated method stub
 		return false;
 	}
 
 	@Override
 	public boolean scrolled(int amount) {
-		// TODO Auto-generated method stub
 		return false;
 	}
 }
