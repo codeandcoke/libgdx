@@ -16,7 +16,7 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
  * sprite bucket.png sprite, de mvdv (https://www.box.com/s/605bvdlwuqubtutbyf4x )
  * 
  * @author Santiago Faci
- * @version 1.0
+ * @version curso 2014-2015
  */
 public class Drop extends Game {
 

@@ -19,8 +19,7 @@ import com.badlogic.gdx.utils.TimeUtils;
 /**
  * Pantalla del juego, donde el usuario juega la partida
  * @author Santiago Faci
- * @version 1.0
- *
+ * @version curso 2014-2015
  */
 public class GameScreen implements Screen {
 

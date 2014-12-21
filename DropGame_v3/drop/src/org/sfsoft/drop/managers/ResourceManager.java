@@ -12,7 +12,7 @@ import java.util.Map;
 /**
  * Clase encargada de la gestión de recursos del juego
  * @author Santiago Faci
- * @version 1.0
+ * @version curso 2014-2015
  */
 public class ResourceManager implements Disposable {
 
@@ -28,14 +28,14 @@ public class ResourceManager implements Disposable {
      */
     public void loadAllResources() {
 
-        atlas = new TextureAtlas(Gdx.files.internal("drop.pack"));
+        atlas = new TextureAtlas(Gdx.files.internal("sprites/drop.pack"));
 
         sonidos = new HashMap<String, Sound>();
-        sonidos.put("waterdrop", Gdx.audio.newSound(Gdx.files.internal("waterdrop.wav")));
-        sonidos.put("rock", Gdx.audio.newSound(Gdx.files.internal("rock.mp3")));
+        sonidos.put("waterdrop", Gdx.audio.newSound(Gdx.files.internal("sounds/waterdrop.wav")));
+        sonidos.put("rock", Gdx.audio.newSound(Gdx.files.internal("sounds/rock.mp3")));
 
         musicas = new HashMap<String, Music>();
-        musicas.put("bso", Gdx.audio.newMusic(Gdx.files.internal("undertreeinrain.mp3")));
+        musicas.put("bso", Gdx.audio.newMusic(Gdx.files.internal("sounds/undertreeinrain.mp3")));
     }
 
     /**

@@ -1,7 +1,8 @@
 libgdx
 ======
 
-Ejemplos de programación de videojuegos con Java y libgdx
+Ejemplos básicos de programación de videojuegos con Java y libgdx
+Los ejemplos de videojuegos más completos se encuentran en sus respectivos repositorios
 
 - **Characters**: Ejemplo de cómo crear la estructura de clases, utilizando _POO_, para los personajes (enemigos o no) de un juego. El ejemplo es totalmente válido para crear la estructura de otros elementos del juego como los _powerups_, o incluso podrían pertenecer a dicha estructura
 - **ConfigurationManager**: Ejemplo de cómo crear un `ConfigurationManager`, para controlar las preferencias del usuario en el juego
@@ -20,7 +21,6 @@ Ejemplos de programación de videojuegos con Java y libgdx
 - **box2d_joints**: Cómo crear _joints_ con Box2D
 - **box2d_lights**: Cómo aplicar luces de diferentes tipos con Box2D
 - **box2d_textures**: Cómo aplicar texturas a los cuerpos con Box2D
-- **frogger**: Ejemplo de juego 2D clone de _Rana_ (sólo sprites ahora mismo)
 - **jfighter2dx**: Ejemplo de juego de naves 2D (menú, generador de niveles, varios enemigos) 
 - **jumper2dx**: Ejemplo de juego de plataformas utilizando TiledMaps
 - **robin2dx**: Juego 2D tipo _Zelda_ desarrollado con libgdx. Ejemplo de cómo cargar un _TiledMap_, mover un personaje por la pantalla y colisionar con algunos elementos de éste

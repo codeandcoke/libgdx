@@ -13,7 +13,7 @@ import org.sfsoft.drop.managers.SpriteManager;
 /**
  * Pantalla del juego, donde el usuario juega la partida
  * @author Santiago Faci
- * @version 3.0
+ * @version curso 2014-2015
  *
  */
 public class GameScreen implements Screen, InputProcessor {

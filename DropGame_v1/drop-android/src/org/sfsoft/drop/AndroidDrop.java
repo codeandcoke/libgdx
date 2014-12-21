@@ -12,8 +12,7 @@ import android.view.Menu;
 /**
  * Clase principal para la versión Android del proyecto
  * @author Santiago Faci
- * @version 1.0
- *
+ * @version curso 2014-2015
  */
 public class AndroidDrop extends AndroidApplication {
 	public void onCreate (android.os.Bundle savedInstanceState) {

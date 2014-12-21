@@ -10,7 +10,7 @@ import com.badlogic.gdx.graphics.OrthographicCamera;
  * Pantalla de inicio
  * Se presenta el menú de juego
  * @author Santiago Faci
- * @version 3.0
+ * @version curso 2014-2015
  *
  */
 public class MainMenuScreen implements Screen {

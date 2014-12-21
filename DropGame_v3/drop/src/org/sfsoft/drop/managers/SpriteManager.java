@@ -21,7 +21,7 @@ import java.util.Iterator;
 /**
  * Clase encargada de la lógica del juego
  * @author Santiago Faci
- * @version 1.0
+ * @version curso 2014-2015
  */
 public class SpriteManager {
 

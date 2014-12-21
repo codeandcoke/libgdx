@@ -6,7 +6,7 @@ import com.badlogic.gdx.backends.android.AndroidApplicationConfiguration;
 /**
  * Clase principal para la versión Android del proyecto
  * @author Santiago Faci
- * @version 2.0
+ * @version curso 2014-2015
  *
  */
 public class AndroidDrop extends AndroidApplication {

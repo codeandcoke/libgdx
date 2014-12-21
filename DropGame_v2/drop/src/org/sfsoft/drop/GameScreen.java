@@ -22,8 +22,7 @@ import com.badlogic.gdx.utils.Timer.Task;
 /**
  * Pantalla del juego, donde el usuario juega la partida
  * @author Santiago Faci
- * @version 2.0
- *
+ * @version curso 2014-2015
  */
 public class GameScreen implements Screen, InputProcessor {
 
