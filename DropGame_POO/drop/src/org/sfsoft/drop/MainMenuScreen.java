@@ -4,25 +4,20 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input.Keys;
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.GL10;
-import com.badlogic.gdx.graphics.OrthographicCamera;
 
 /**
  * Pantalla de inicio
- * Se presenta el menú de juego
+ * Se presenta el menÃº de game
  * @author Santiago Faci
- *
+ * @version curso 2014-2015
  */
 public class MainMenuScreen implements Screen {
 	
-	final Drop juego;
+	final Drop game;
+
 	
-	OrthographicCamera camara;
-	
-	public MainMenuScreen(Drop juego) {
-		this.juego = juego;
-		
-		camara = new OrthographicCamera();
-		camara.setToOrtho(false, 1024, 768);
+	public MainMenuScreen(Drop game) {
+		this.game = game;
 	}
 
 	@Override
@@ -31,21 +26,18 @@ public class MainMenuScreen implements Screen {
 		Gdx.gl.glClearColor(0, 0, 0.2f, 1);
 		Gdx.gl.glClear(GL10.GL_COLOR_BUFFER_BIT);
 		
-		camara.update();
-		juego.spriteBatch.setProjectionMatrix(camara.combined);
-		
-		// Muestra un menú de inicio
-		juego.spriteBatch.begin();
-		juego.fuente.draw(juego.spriteBatch, "Bienvenido a Drop!!!!", 100, 150);
-		juego.fuente.draw(juego.spriteBatch, "Pulsa para empezar", 100, 130);
-		juego.fuente.draw(juego.spriteBatch, "Pulsa 'ESCAPE' para SALIR", 100, 110);
-		juego.spriteBatch.end();
+		// Muestra un menÃº de inicio
+		game.spriteBatch.begin();
+		game.fuente.draw(game.spriteBatch, "Bienvenido a Drop!!!!", 100, 150);
+		game.fuente.draw(game.spriteBatch, "Pulsa para empezar", 100, 130);
+		game.fuente.draw(game.spriteBatch, "Pulsa 'ESCAPE' para SALIR", 100, 110);
+		game.spriteBatch.end();
 		
 		/*
 		 * Si el usuario toca la pantalla se inicia la partida
 		 */
 		if (Gdx.input.isTouched()) {
-			juego.setScreen(new GameScreen(juego));
+			game.setScreen(new GameScreen(game));
 			dispose();
 		}
 		if (Gdx.input.isKeyPressed(Keys.ESCAPE)) {
