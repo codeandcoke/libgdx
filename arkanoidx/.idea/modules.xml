@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/arkanoidx.iml" filepath="$PROJECT_DIR$/.idea/arkanoidx.iml" />
+      <module fileurl="file://$PROJECT_DIR$/arkanoidx-desktop/arkanoidx-desktop.iml" filepath="$PROJECT_DIR$/arkanoidx-desktop/arkanoidx-desktop.iml" />
+    </modules>
+  </component>
+</project>

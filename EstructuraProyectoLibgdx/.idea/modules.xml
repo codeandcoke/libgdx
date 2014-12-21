@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/holalibgdx/holalibgdx.iml" filepath="$PROJECT_DIR$/holalibgdx/holalibgdx.iml" />
+      <module fileurl="file://$PROJECT_DIR$/holalibgdx-android/holalibgdx-android.iml" filepath="$PROJECT_DIR$/holalibgdx-android/holalibgdx-android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/holalibgdx-desktop/holalibgdx-desktop.iml" filepath="$PROJECT_DIR$/holalibgdx-desktop/holalibgdx-desktop.iml" />
+    </modules>
+  </component>
+</project>

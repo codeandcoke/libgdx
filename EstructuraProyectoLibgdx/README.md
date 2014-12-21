@@ -1,3 +1,3 @@
 EstructuraProyectoLibgdx
 ========================
-Estructura básica de todo proyecto libgdx para android y pc
+Estructura básica de un proyecto libgdx para android y pc

@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="libs1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/holalibgdx-android/libs/android-support-v4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/holalibgdx-android/libs/gdx-backend-android.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
