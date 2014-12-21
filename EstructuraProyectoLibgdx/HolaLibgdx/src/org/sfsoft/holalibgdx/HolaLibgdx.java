@@ -5,12 +5,12 @@ import com.badlogic.gdx.ApplicationListener;
 /**
  * Clase principal del proyecto principal del juego
  * @author Santiago Faci
- *
+ * @version curso 2014-2015
  */
 public class HolaLibgdx implements ApplicationListener {
 
 	/*
-	 * M閠odo invocado en el momento de crearse la aplicaci髇
+	 * M茅todo invocado en el momento de crearse la aplicaci贸n
 	 * @see com.badlogic.gdx.ApplicationListener#create()
 	 */
 	@Override
@@ -18,7 +18,7 @@ public class HolaLibgdx implements ApplicationListener {
 	}
 
 	/*
-	 * M閠odo invocado cuando se destruye la aplicaci髇
+	 * M茅todo invocado cuando se destruye la aplicaci贸n
 	 * Siempre va precedido de una llamada a 'pause()'
 	 * @see com.badlogic.gdx.ApplicationListener#dispose()
 	 */
@@ -27,9 +27,9 @@ public class HolaLibgdx implements ApplicationListener {
 	}
 
 	/*
-	 * En Android se invoca a este m閠odo cuando la aplicaci髇
+	 * En Android se invoca a este m茅todo cuando la aplicaci贸n
 	 * pasa a segundo plano.
-	 * En la versi髇 de PC, se invoca siempre antes de invocar a 'dispose()'
+	 * En la versi贸n de PC, se invoca siempre antes de invocar a 'dispose()'
 	 * Es el momento de almacenar el estado de la partida
 	 * @see com.badlogic.gdx.ApplicationListener#pause()
 	 */
@@ -38,8 +38,8 @@ public class HolaLibgdx implements ApplicationListener {
 	}
 
 	/*
-	 * M閠odo que se invoca cada vez que hay que renderizar
-	 * Es el m閠odo donde se actualiza tambi閚 la l骻ica del juego
+	 * M茅todo que se invoca cada vez que hay que renderizar
+	 * Es el m茅todo donde se actualiza tambi茅n la l贸gica del juego
 	 * @see com.badlogic.gdx.ApplicationListener#pause()
 	 */
 	@Override
@@ -47,8 +47,8 @@ public class HolaLibgdx implements ApplicationListener {
 	}
 
 	/*
-	 * M閠odo invocado cada vez que se redimensiona la pantalla sin pausar el juego
-	 * Tambi閚 se invoca justo despu閟 de 'create()'
+	 * M茅todo invocado cada vez que se redimensiona la pantalla sin pausar el juego
+	 * Tambi茅n se invoca justo despu茅s de 'create()'
 	 * @see com.badlogic.gdx.ApplicationListener#dispose()
 	 */
 	@Override
@@ -56,8 +56,8 @@ public class HolaLibgdx implements ApplicationListener {
 	}
 
 	/*
-	 * S髄o se invoca en Android, cuando la aplicaci髇 continua
-	 * despu閟 de haber sido pausada
+	 * S贸lo se invoca en Android, cuando la aplicaci贸n continua
+	 * despu茅s de haber sido pausada
 	 * @see com.badlogic.gdx.ApplicationListener#resume()
 	 */
 	@Override

@@ -3,9 +3,9 @@ package org.sfsoft.holalibgdx;
 import com.badlogic.gdx.backends.lwjgl.LwjglApplication;
 
 /**
- * Clase principal de la versión de escritorio (PC) del juego
+ * Clase principal de la versiÃ³n de escritorio (PC) del juego
  * @author Santiago Faci
- *
+ * @version curso 2014-2015
  */
 public class DesktopHolaLibgdx {
 

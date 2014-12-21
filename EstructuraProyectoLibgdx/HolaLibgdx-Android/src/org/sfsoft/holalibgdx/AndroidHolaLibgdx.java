@@ -7,9 +7,9 @@ import android.app.Activity;
 import android.view.Menu;
 
 /**
- * Clase principal para la versión Android del proyecto
+ * Clase principal para la versiÃ³n Android del proyecto
  * @author Santiago Faci
- *
+ * @version curso 2014-2015
  */
 public class AndroidHolaLibgdx extends AndroidApplication {
 	public void onCreate (android.os.Bundle savedInstanceState) {
