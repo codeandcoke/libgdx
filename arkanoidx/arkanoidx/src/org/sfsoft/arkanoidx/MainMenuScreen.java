@@ -4,13 +4,12 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input.Keys;
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.GL10;
-import com.badlogic.gdx.graphics.OrthographicCamera;
 
 /**
  * Pantalla de inicio
- * Se presenta el menú de juego
+ * Se presenta el menÃº de game
  * @author Santiago Faci
- *
+ * @version curso 2014-2015
  */
 public class MainMenuScreen implements Screen {
 	
@@ -26,13 +25,11 @@ public class MainMenuScreen implements Screen {
 		Gdx.gl.glClearColor(0, 0, 0.2f, 1);
 		Gdx.gl.glClear(GL10.GL_COLOR_BUFFER_BIT);
 		
-		game.camera.update();
-		
-		// Muestra un menú de inicio
+		// Muestra un menÃº de inicio
 		game.spriteBatch.begin();
-		game.fuente.draw(game.spriteBatch, "Bienvenido a Arkanoidx!!!!", 100, 150);
-		game.fuente.draw(game.spriteBatch, "Pulsa para empezar", 100, 130);
-		game.fuente.draw(game.spriteBatch, "Pulsa 'ESCAPE' para SALIR", 100, 110);
+		game.font.draw(game.spriteBatch, "Bienvenido a Arkanoidx!!!!", 100, 150);
+		game.font.draw(game.spriteBatch, "Pulsa para empezar", 100, 130);
+		game.font.draw(game.spriteBatch, "Pulsa 'ESCAPE' para SALIR", 100, 110);
 		game.spriteBatch.end();
 		
 		/*

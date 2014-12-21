@@ -9,7 +9,9 @@ import com.badlogic.gdx.graphics.Texture;
 /**
  * Clase que gestiona los recursos del juego
  * @author Santiago Faci
+ * @version curso 2014-2015
  *
+ * TODO Utilizar TextureAtlas para almacenar los sprites
  */
 public class ResourceManager {
 
@@ -22,7 +24,7 @@ public class ResourceManager {
 	public static void loadAllResources() {
 		
 		Texture.setEnforcePotImages(false);
-		// Imágenes
+		// Imï¿½genes
 		ResourceManager.loadResource("ball", new Texture("player/ball.png"));
 		ResourceManager.loadResource("board", new Texture("player/board.png"));
 		ResourceManager.loadResource("yellow_brick", new Texture("bricks/yellow_brick.png"));

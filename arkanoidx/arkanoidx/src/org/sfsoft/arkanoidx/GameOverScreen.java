@@ -4,32 +4,21 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input.Keys;
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.GL10;
-import com.badlogic.gdx.graphics.OrthographicCamera;
-import com.badlogic.gdx.scenes.scene2d.Stage;
-import com.badlogic.gdx.scenes.scene2d.ui.Table;
-import com.badlogic.gdx.scenes.scene2d.ui.TextField;
 
 /**
  * Pantalla de fin de partida. Se muestra cuando el usuario termina una partida
- * Se presenta un men� de juego
+ * Se presenta un menú de game
  * @author Santiago Faci
+ *
+ * TODO Ponerla en marcha
  *
  */
 public class GameOverScreen implements Screen {
 	
-	final Arkanoidx juego;
+	final Arkanoidx game;
 	
-	Stage menu;
-	Table tablaMenu;
-	TextField tfNombre;
-	
-	OrthographicCamera camara;
-	
-	public GameOverScreen(Arkanoidx juego) {
-		this.juego = juego;
-		
-		camara = new OrthographicCamera();
-		camara.setToOrtho(false, 1024, 768);
+	public GameOverScreen(Arkanoidx game) {
+		this.game = game;
 	}
 
 	@Override
@@ -37,30 +26,27 @@ public class GameOverScreen implements Screen {
 		
 		Gdx.gl.glClearColor(0, 0.3f, 0.6f, 1);
 		Gdx.gl.glClear(GL10.GL_COLOR_BUFFER_BIT);
-		
-		camara.update();
-		juego.spriteBatch.setProjectionMatrix(camara.combined);
-		
-		// Muestra un men� de inicio
-		juego.spriteBatch.begin();
-		juego.fuente.draw(juego.spriteBatch, "Fin del juego!!!!", 100, 150);
-		juego.fuente.draw(juego.spriteBatch, "Si quieres jugar otra partida pulsa la tecla 'N'", 100, 110);
-		juego.fuente.draw(juego.spriteBatch, "Pulsa 'ESCAPE' para SALIR", 100, 90);
-		juego.spriteBatch.end();
+
+		// Muestra un menú de inicio
+		game.spriteBatch.begin();
+		game.font.draw(game.spriteBatch, "Fin del juego!!!!", 100, 150);
+		game.font.draw(game.spriteBatch, "Si quieres jugar otra partida pulsa la tecla 'N'", 100, 110);
+		game.font.draw(game.spriteBatch, "Pulsa 'ESCAPE' para SALIR", 100, 90);
+		game.spriteBatch.end();
 		
 		/*
 		 * Si el usuario toca la pantalla se inicia la partida
 		 */
 		if (Gdx.input.isKeyPressed(Keys.N)) {
 			/*
-			 * Aquí habrá que reiniciar algunos aspectos del
-			 * juego de cara a empezar una nueva partida
+			 * TODO Aquí habrá que reiniciar algunos aspectos del
+			 * game de cara a empezar una nueva partida
 			 */
 			
-			juego.setScreen(new GameScreen(juego));
+			game.setScreen(new GameScreen(game));
 		}
 		/*
-		 * El usuario pulsa la tecla ESCAPE, se sale del juego
+		 * El usuario pulsa la tecla ESCAPE, se sale del game
 		 */
 		else if (Gdx.input.isKeyPressed(Keys.ESCAPE)) {
 			dispose();
@@ -90,6 +76,6 @@ public class GameOverScreen implements Screen {
 
 	@Override
 	public void dispose() {
-		juego.dispose();
+		game.dispose();
 	}
 }

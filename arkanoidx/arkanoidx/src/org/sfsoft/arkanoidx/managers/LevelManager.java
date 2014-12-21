@@ -11,7 +11,7 @@ import com.badlogic.gdx.graphics.Texture;
 /**
  * Clase que gestiona los niveles del juego
  * @author Santiago Faci
- *
+ * @version curso 2014-2015
  */
 public class LevelManager {
 

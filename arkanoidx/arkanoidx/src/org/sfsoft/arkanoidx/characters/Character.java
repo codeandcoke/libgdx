@@ -7,14 +7,13 @@ import com.badlogic.gdx.math.Rectangle;
 /**
  * Clase base para todos los caracteres del juego
  * @author Santiago Faci
- * @version 1.0
- *
+ * @version curso 2014-2015
  */
 public abstract class Character {
 
 	Texture texture;
-	float x;
-	float y;
+	public float x;
+	public float y;
 	Rectangle rect;
 	
 	public Character(Texture texture, float x, float y) {
@@ -31,7 +30,7 @@ public abstract class Character {
 	
 	public void update(float dt) {
 		
-		// Actualiza la posiciÛn del rect·ngulo
+		// Actualiza la posici√≥n del rect√°ngulo
 		rect.x = x;
 		rect.y = y;
 	};

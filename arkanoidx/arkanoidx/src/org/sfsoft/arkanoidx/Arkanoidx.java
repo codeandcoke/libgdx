@@ -1,9 +1,6 @@
 package org.sfsoft.arkanoidx;
 
-import org.sfsoft.arkanoidx.util.Constants;
-
 import com.badlogic.gdx.Game;
-import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
@@ -11,24 +8,22 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
  * Clase principal del proyecto principal del juego
  * 
  * @author Santiago Faci
+ * @version curso 2014-2015
  *
+ * TODO Añadir más niveles
+ * TODO Añadir sonidos/música
+ * TODO Utilizar TextureAtlas para almcenar y cargar las texturas
+ * TODO Mostrar HUD (nivel, vidas, puntuación)
  */
 public class Arkanoidx extends Game {
 
-	public OrthographicCamera camera;
 	SpriteBatch spriteBatch;
-	BitmapFont fuente;
+	BitmapFont font;
 	
 	@Override
 	public void create() {
 		spriteBatch = new SpriteBatch();
-		fuente = new BitmapFont();
-		
-		// Crea la cámara y define la zona de visión del juego (toda la pantalla)
-		camera = new OrthographicCamera();
-		camera.setToOrtho(false, Constants.SCREEN_WIDTH, Constants.SCREEN_HEIGHT);
-		camera.update();
-		
+		font = new BitmapFont();
 		setScreen(new MainMenuScreen(this));
 	}
 
@@ -40,6 +35,6 @@ public class Arkanoidx extends Game {
 	@Override
 	public void dispose() {
 		spriteBatch.dispose();
-		fuente.dispose();
+		font.dispose();
 	}
 }

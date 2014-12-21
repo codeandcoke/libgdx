@@ -7,12 +7,11 @@ import com.badlogic.gdx.graphics.Texture;
 /**
  * Clase que representa la tabla del jugador
  * @author Santiago Faci
- * @version 1.0
- *
+ * @version curso 2014-2015
  */
 public class Board extends Character {
 
-	int lives;
+	public int lives;
 	public enum State {
 		RIGHT, LEFT, IDLE;
 	}
@@ -35,7 +34,7 @@ public class Board extends Character {
 		
 		super.update(dt);
 		
-		// Comprueba los límites de la pantalla
+		// Comprueba los lÃ­mites de la pantalla
 		if (x <= 0)
 			x = 0;
 		
