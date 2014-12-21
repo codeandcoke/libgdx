@@ -10,13 +10,11 @@ import com.badlogic.gdx.graphics.OrthographicCamera;
 /**
  * Pantalla de Juego, donde el usuario juega la partida
  * @author Santiago Faci
- * @version 1.0
- *
+ * @version curso 2014-2015
  */
 public class GameScreen implements Screen {
 
 	final Robin2DX game;
-	OrthographicCamera camera;
 	
 	public GameScreen(Robin2DX game) {
 		this.game = game;

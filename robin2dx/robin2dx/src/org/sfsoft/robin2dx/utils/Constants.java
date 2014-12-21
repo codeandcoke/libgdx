@@ -3,8 +3,7 @@ package org.sfsoft.robin2dx.utils;
 /**
  * Constantes del juego
  * @author Santiago Faci
- * @version 1.0
- *
+ * @version curso 2014-2015
  */
 public class Constants {
 	

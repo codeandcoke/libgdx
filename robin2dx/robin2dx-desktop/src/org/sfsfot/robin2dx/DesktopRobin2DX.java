@@ -6,6 +6,11 @@ import org.sfsoft.robin2dx.utils.Constants;
 import com.badlogic.gdx.backends.lwjgl.LwjglApplication;
 import com.badlogic.gdx.backends.lwjgl.LwjglApplicationConfiguration;
 
+/**
+ * Clase lanzadera para la versión de PC
+ * @author Santiago Faci
+ * @version curso 2014-2015
+ */
 public class DesktopRobin2DX {
 
 	public static void main(String[] args) {

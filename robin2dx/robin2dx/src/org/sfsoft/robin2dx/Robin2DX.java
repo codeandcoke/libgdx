@@ -12,8 +12,12 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
  * Clase principal del juego
  * 
  * @author Santiago Faci
- * @version 1.0
+ * @version curso 2014-2015
  *
+ * TODO Añadir Enemigos
+ * TODO Añadir HUD (Heads-Up Display)
+ * TODO Añadir nuevos niveles con más elementos
+ * TODO Añadir acciones al personaje
  */
 public class Robin2DX extends Game {
 	
@@ -76,7 +80,7 @@ public class Robin2DX extends Game {
 	
 	/*
 	 * Proporciona compatibilidad con Android
-	 * El juego puede ser pasado a primer plano despu�s de haber sido pausado
+	 * El juego puede ser pasado a primer plano después de haber sido pausado
 	 * 
 	 */
 	@Override

@@ -20,8 +20,7 @@ import com.badlogic.gdx.utils.Pool;
 /**
  * Clase encargada la lógica y renderizado del juego
  * @author Santiago Faci
- * @version 1.0
- *
+ * @version curso 2014-2015
  */
 public class SpriteManager {
 	
@@ -70,13 +69,13 @@ public class SpriteManager {
 		
 		camera.position.set(player.position.x, player.position.y + 100, 0);
 		
-		handleInput(dt);
+		handleInput();
 		player.update(dt);
 		
-		checkCollisions(dt);
+		checkCollisions();
 	}
 	
-	private void handleInput(float dt) {
+	private void handleInput() {
 		
 		if (Gdx.input.isKeyPressed(Keys.LEFT)) {	
 			player.velocity.x = -Player.SPEED;
@@ -118,11 +117,10 @@ public class SpriteManager {
 	/**
 	 * Comprueba las colisiones del jugador con los elementos del mapa
 	 * Ahora mismo sólo comprueba las colisiones con las casas
-	 * @param dt
 	 */
-	private void checkCollisions(float dt) {
+	private void checkCollisions() {
 		
-		Array<Rectangle> tiles = new Array<Rectangle>();
+		Array<Rectangle> tiles = new Array<>();
 		
 		// Recoge las celdas de la posición del jugador	
 		int startX = (int) (player.position.x + player.velocity.x);

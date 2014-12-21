@@ -9,10 +9,9 @@ import com.badlogic.gdx.graphics.GL10;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 
 /**
- * Men� principal del juego
+ * Menú principal del juego
  * @author Santiago Faci
- * @version 1.0
- *
+ * @version curso 2014-2015
  */
 public class MainMenuScreen implements Screen {
 	

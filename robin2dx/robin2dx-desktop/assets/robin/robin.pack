@@ -3,143 +3,143 @@ robin.png
 format: RGBA8888
 filter: Nearest,Nearest
 repeat: none
-robin_down4
+robin_down
   rotate: false
   xy: 1, 138
   size: 36, 61
   orig: 36, 61
   offset: 0, 0
-  index: -1
-robin_left1
+  index: 4
+robin_left
   rotate: false
   xy: 39, 137
   size: 32, 62
   orig: 32, 62
   offset: 0, 0
-  index: -1
-robin_down1
+  index: 1
+robin_down
   rotate: false
   xy: 73, 136
   size: 33, 63
   orig: 33, 63
   offset: 0, 0
-  index: -1
-robin_down2
+  index: 1
+robin_down
   rotate: false
   xy: 108, 136
   size: 38, 63
   orig: 38, 63
   offset: 0, 0
-  index: -1
-robin_left3
+  index: 2
+robin_left
   rotate: false
   xy: 148, 136
   size: 39, 63
   orig: 39, 63
   offset: 0, 0
-  index: -1
-robin_left5
+  index: 3
+robin_left
   rotate: false
   xy: 189, 136
   size: 37, 63
   orig: 37, 63
   offset: 0, 0
-  index: -1
-robin_right5
+  index: 5
+robin_right
   rotate: false
   xy: 1, 73
   size: 32, 63
   orig: 32, 63
   offset: 0, 0
-  index: -1
-robin_up4
+  index: 5
+robin_up
   rotate: false
   xy: 35, 72
   size: 36, 63
   orig: 36, 63
   offset: 0, 0
-  index: -1
-robin_up5
+  index: 4
+robin_up
   rotate: false
   xy: 73, 71
   size: 33, 63
   orig: 33, 63
   offset: 0, 0
-  index: -1
-robin_down5
+  index: 5
+robin_down
   rotate: false
   xy: 108, 70
   size: 36, 64
   orig: 36, 64
   offset: 0, 0
-  index: -1
-robin_right3
+  index: 5
+robin_right
   rotate: false
   xy: 146, 70
   size: 38, 64
   orig: 38, 64
   offset: 0, 0
-  index: -1
-robin_up1
+  index: 3
+robin_up
   rotate: false
   xy: 186, 70
   size: 33, 64
   orig: 33, 64
   offset: 0, 0
-  index: -1
-robin_up3
+  index: 1
+robin_up
   rotate: false
   xy: 221, 70
   size: 32, 64
   orig: 32, 64
   offset: 0, 0
-  index: -1
-robin_up2
+  index: 3
+robin_up
   rotate: false
   xy: 1, 6
   size: 35, 64
   orig: 35, 64
   offset: 0, 0
-  index: -1
-robin_down3
+  index: 2
+robin_down
   rotate: false
   xy: 38, 4
   size: 37, 65
   orig: 37, 65
   offset: 0, 0
-  index: -1
-robin_right1
+  index: 3
+robin_right
   rotate: false
   xy: 77, 3
   size: 37, 65
   orig: 37, 65
   offset: 0, 0
-  index: -1
-robin_left2
+  index: 1
+robin_left
   rotate: false
   xy: 116, 2
   size: 33, 66
   orig: 33, 66
   offset: 0, 0
-  index: -1
-robin_right4
+  index: 2
+robin_right
   rotate: false
   xy: 151, 2
   size: 33, 66
   orig: 33, 66
   offset: 0, 0
-  index: -1
-robin_left4
+  index: 4
+robin_left
   rotate: false
   xy: 186, 1
   size: 33, 67
   orig: 33, 67
   offset: 0, 0
-  index: -1
-robin_right2
+  index: 4
+robin_right
   rotate: false
   xy: 221, 1
   size: 33, 67
   orig: 33, 67
   offset: 0, 0
-  index: -1
+  index: 2

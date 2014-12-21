@@ -11,7 +11,7 @@ import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 /**
  * Clase encargada de cargar los recursos del juego
  * @author Santiago Faci
- * @version 1.0
+ * @version curso 2014-2015
  *
  */
 public class ResourceManager {
@@ -25,30 +25,10 @@ public class ResourceManager {
 		
 		loadResource("robin", new TextureAtlas(Gdx.files.internal("robin/robin.pack")));
 		
-		loadResource("robin_right", new Animation(0.15f, 
-			atlas.get("robin").findRegion("robin_right1"),
-			atlas.get("robin").findRegion("robin_right2"),
-			atlas.get("robin").findRegion("robin_right3"),
-			atlas.get("robin").findRegion("robin_right4"),
-			atlas.get("robin").findRegion("robin_right5")));
-		loadResource("robin_left", new Animation(0.15f, 
-			atlas.get("robin").findRegion("robin_left1"),
-			atlas.get("robin").findRegion("robin_left2"),
-			atlas.get("robin").findRegion("robin_left3"),
-			atlas.get("robin").findRegion("robin_left4"),
-			atlas.get("robin").findRegion("robin_left5")));
-		loadResource("robin_up", new Animation(0.15f, 
-			atlas.get("robin").findRegion("robin_up1"),
-			atlas.get("robin").findRegion("robin_up2"),
-			atlas.get("robin").findRegion("robin_up3"),
-			atlas.get("robin").findRegion("robin_up4"),
-			atlas.get("robin").findRegion("robin_up5")));
-		loadResource("robin_down", new Animation(0.15f, 
-			atlas.get("robin").findRegion("robin_down1"),
-			atlas.get("robin").findRegion("robin_down2"),
-			atlas.get("robin").findRegion("robin_down3"),
-			atlas.get("robin").findRegion("robin_down4"),
-			atlas.get("robin").findRegion("robin_down5")));
+		loadResource("robin_right", new Animation(0.15f, atlas.get("robin").findRegions("robin_right")));
+		loadResource("robin_left", new Animation(0.15f, atlas.get("robin").findRegions("robin_left")));
+		loadResource("robin_up", new Animation(0.15f, atlas.get("robin").findRegions("robin_up")));
+		loadResource("robin_down", new Animation(0.15f, atlas.get("robin").findRegions("robin_down")));
 	}
 	
 	private static void loadResource(String name, TextureAtlas textureAtlas) {

@@ -10,6 +10,11 @@ import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.math.Vector2;
 
+/**
+ * Jugador
+ * @author Santiago Faci
+ * @version 2014-2015
+ */
 public class Player {
 
 	public static float SPEED = 50f;
@@ -37,7 +42,7 @@ public class Player {
 		upAnimation = ResourceManager.getAnimation("robin_up");
 		downAnimation = ResourceManager.getAnimation("robin_down");
 		
-		idleTexture = ResourceManager.getAtlas("robin").findRegion("robin_right1");
+		idleTexture = ResourceManager.getAtlas("robin").findRegion("robin_right", 1);
 		
 		position.x = x;
 		position.y = y;

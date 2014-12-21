@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/robin2dx/robin2dx.iml" filepath="$PROJECT_DIR$/robin2dx/robin2dx.iml" />
+      <module fileurl="file://$PROJECT_DIR$/robin2dx-desktop/robin2dx-desktop.iml" filepath="$PROJECT_DIR$/robin2dx-desktop/robin2dx-desktop.iml" />
+    </modules>
+  </component>
+</project>
