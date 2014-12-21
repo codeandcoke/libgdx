@@ -4,14 +4,12 @@ import com.badlogic.gdx.graphics.g2d.*;
 import org.sfsoft.frogger.util.Constants;
 
 import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.math.Vector2;
 
 /**
  * Clase que representa la rana del juego
  * @author Santiago Faci
- * @version 1.0
- *
+ * @version curso 201-2015
  */
 public class Frog {
 
@@ -38,12 +36,13 @@ public class Frog {
 		position = new Vector2(x, y);
 		this.lives = lives;
 		state = State.IDLE;
-		
+
+		TextureAtlas atlas = new TextureAtlas(Gdx.files.internal("animaciones.pack"));
 		// Carga las animaciones para cada dirección
-		rightAnimation = new Animation(0.25f, new TextureAtlas(Gdx.files.internal("animaciones.pack")).findRegions("frog_right"));
-		leftAnimation = new Animation(0.25f, new TextureAtlas(Gdx.files.internal("animaciones.pack")).findRegions("frog_left"));
-		upAnimation = new Animation(0.25f, new TextureAtlas(Gdx.files.internal("animaciones.pack")).findRegions("frog_up"));
-		downAnimation = new Animation(0.25f, new TextureAtlas(Gdx.files.internal("animaciones.pack")).findRegions("frog_down"));
+		rightAnimation = new Animation(0.25f, atlas.findRegions("frog_right"));
+		leftAnimation = new Animation(0.25f, atlas.findRegions("frog_left"));
+		upAnimation = new Animation(0.25f, atlas.findRegions("frog_up"));
+		downAnimation = new Animation(0.25f, atlas.findRegions("frog_down"));
 	}
 	
 	// Desplaza la tabla en el eje x

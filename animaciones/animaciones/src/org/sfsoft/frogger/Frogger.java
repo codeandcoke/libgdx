@@ -17,11 +17,10 @@ import com.badlogic.gdx.math.Vector2;
 /**
  * Clase principal del proyecto
  * @author Santiago Faci
- * @version 1.0
+ * @version curso 2014-2015
  */
 public class Frogger extends Game {
 
-	public OrthographicCamera camera;
 	SpriteBatch spriteBatch;
 	BitmapFont fuente;
 	
@@ -35,11 +34,6 @@ public class Frogger extends Game {
 	public void create() {
 		spriteBatch = new SpriteBatch();
 		fuente = new BitmapFont();
-		
-		// Crea la cámara y define la zona de visión del juego (toda la pantalla)
-		camera = new OrthographicCamera();
-		camera.setToOrtho(false, Constants.SCREEN_WIDTH, Constants.SCREEN_HEIGHT);
-		camera.update();
 		
 		Texture.setEnforcePotImages(false);
 		

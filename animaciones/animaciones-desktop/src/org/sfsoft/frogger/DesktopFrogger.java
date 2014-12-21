@@ -1,6 +1,5 @@
 package org.sfsoft.frogger;
 
-import org.sfsoft.frogger.Frogger;
 import org.sfsoft.frogger.util.Constants;
 
 import com.badlogic.gdx.backends.lwjgl.LwjglApplication;
@@ -11,7 +10,7 @@ import com.badlogic.gdx.backends.lwjgl.LwjglApplicationConfiguration;
  * Esta clase hace de lanzadora (para la versión de PC en este caso)
  * del proyecto principal
  * @author Santiago Faci
- * @version 1.0
+ * @version curso 2014-2015
  *
  */
 public class DesktopFrogger {

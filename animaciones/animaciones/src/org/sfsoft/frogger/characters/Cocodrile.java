@@ -4,14 +4,12 @@ import com.badlogic.gdx.graphics.g2d.*;
 import org.sfsoft.frogger.util.Constants;
 
 import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.math.Vector2;
 
 /**
  * Clase que representa el cocodrilo
  * @author Santiago Faci
- * @version 1.0
- *
+ * @version curso 2014-2014
  */
 public class Cocodrile {
 
