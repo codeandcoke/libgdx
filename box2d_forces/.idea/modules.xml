@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/box2d_forces.iml" filepath="$PROJECT_DIR$/.idea/box2d_forces.iml" />
+      <module fileurl="file://$PROJECT_DIR$/box2d_forces-desktop/box2d_forces-desktop.iml" filepath="$PROJECT_DIR$/box2d_forces-desktop/box2d_forces-desktop.iml" />
+    </modules>
+  </component>
+</project>
