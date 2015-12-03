@@ -1,5 +1,7 @@
 *.class
 .DS_Store
+out
+production
 
 # Package Files #
 *.war
