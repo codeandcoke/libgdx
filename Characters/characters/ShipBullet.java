@@ -6,22 +6,22 @@ import com.badlogic.gdx.math.Rectangle;
 
 /**
  * Proyectiles que lanza la nave del personaje principal
+ *
  * @author Santiago Faci
  * @version 1.0
- *
  */
 public class ShipBullet extends Bullet {
 
-	public ShipBullet(float x, float y, float speed) {
-		super(x, y, speed);
-		
-		texture = ResourceManager.getTexture("ship_bullet");
-		setRect(new Rectangle(x, y, texture.getWidth(), texture.getHeight()));
-	}
+    public ShipBullet(float x, float y, float speed) {
+        super(x, y, speed);
 
-	@Override
-	public void update(float dt) {
-		setX(getX() + getSpeed() * dt);
-		setRectX(getX());
-	}
+        texture = ResourceManager.getTexture("ship_bullet");
+        setRect(new Rectangle(x, y, texture.getWidth(), texture.getHeight()));
+    }
+
+    @Override
+    public void update(float dt) {
+        setX(getX() + getSpeed() * dt);
+        setRectX(getX());
+    }
 }

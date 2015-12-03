@@ -8,157 +8,158 @@ import com.badlogic.gdx.utils.Disposable;
 
 /**
  * Representa cualquier elemento animado (juegador o NPC) del juego
- * @author Santiago Faci
  *
+ * @author Santiago Faci
  */
 public abstract class Character implements Disposable {
 
-	// Velocidad del personaje
-	private float speed;
-	// Velocidad de los proyectiles del personaje
-	private float bulletSpeed;
-	// Ratio de disparo
-	private float bulletRate;
-	// Puntos (si procede)
-	private int points;
-	// Vidas
-	private int lives;
-	
-	// Posición y rectángulo representados por el personaje
-	protected float x;
-	protected float y;
-	private Rectangle rect;
-	
-	// Animación del personaje
-	protected Animation animation;
-	protected float stateTime;
-	protected TextureRegion currentFrame;
-	
-	// Dirección de salida del personaje
-	public enum Direction {
-		LEFT, RIGHT
-	}
-	
-	public Character(float x, float y) {
-		
-		// Default values
-		speed = 200f;
-		bulletSpeed = 400f;
-		bulletRate = 0.2f;
-		points = 100;
-		lives = 1;
-		
-		this.x = x;
-		this.y = y;
-	}
-	
-	public Character(float x, float y, float speed) {
-		
-		// Default values
-		bulletSpeed = 400f;
-		bulletRate = 0.2f;
-		points = 100;
-		lives = 1;
-		
-		this.speed = speed;
-		this.x = x;
-		this.y = y;
-	}
-	
-	public float getSpeed() {
-		return speed;
-	}
+    // Velocidad del personaje
+    private float speed;
+    // Velocidad de los proyectiles del personaje
+    private float bulletSpeed;
+    // Ratio de disparo
+    private float bulletRate;
+    // Puntos (si procede)
+    private int points;
+    // Vidas
+    private int lives;
 
-	public void setSpeed(float speed) {
-		this.speed = speed;
-	}
+    // Posición y rectángulo representados por el personaje
+    protected float x;
+    protected float y;
+    private Rectangle rect;
 
-	public float getBulletSpeed() {
-		return bulletSpeed;
-	}
+    // Animación del personaje
+    protected Animation animation;
+    protected float stateTime;
+    protected TextureRegion currentFrame;
 
-	public void setBulletSpeed(float bulletSpeed) {
-		this.bulletSpeed = bulletSpeed;
-	}
+    // Dirección de salida del personaje
+    public enum Direction {
+        LEFT, RIGHT
+    }
 
-	public float getBulletRate() {
-		return bulletRate;
-	}
+    public Character(float x, float y) {
 
-	public void setBulletRate(float bulletRate) {
-		this.bulletRate = bulletRate;
-	}
+        // Default values
+        speed = 200f;
+        bulletSpeed = 400f;
+        bulletRate = 0.2f;
+        points = 100;
+        lives = 1;
 
-	public int getPoints() {
-		return points;
-	}
+        this.x = x;
+        this.y = y;
+    }
 
-	public void setPoints(int points) {
-		this.points = points;
-	}
+    public Character(float x, float y, float speed) {
 
-	public int getLives() {
-		return lives;
-	}
+        // Default values
+        bulletSpeed = 400f;
+        bulletRate = 0.2f;
+        points = 100;
+        lives = 1;
 
-	public void setLives(int lives) {
-		this.lives = lives;
-	}
+        this.speed = speed;
+        this.x = x;
+        this.y = y;
+    }
 
-	public float getX() {
-		return x;
-	}
+    public float getSpeed() {
+        return speed;
+    }
 
-	public void setX(float x) {
-		this.x = x;
-	}
+    public void setSpeed(float speed) {
+        this.speed = speed;
+    }
 
-	public float getY() {
-		return y;
-	}
+    public float getBulletSpeed() {
+        return bulletSpeed;
+    }
 
-	public void setY(float y) {
-		this.y = y;
-	}
-	
-	public Rectangle getRect() {
-		return rect;
-	}
-	
-	public void setRect(Rectangle rect) {
-		this.rect = rect;
-	}
-	
-	public float getRectX() {
-		return rect.getX();
-	}
-	
-	public void setRectX(float x) {
-		rect.setX(x);
-	}
-	
-	public float getRectY() {
-		return rect.getY();
-	}
-	
-	public void setRectY(float y) {
-		rect.setY(y);
-	}
-	
-	// Recibe un impacto
-	public void hit() {
-		lives--;
-	}
-	
-	// Dibuja en pantalla el personaje
-	public abstract void draw(SpriteBatch batch);
-	
-	public void die() {}
-	
-	@Override
-	public void dispose() {
-		
-		rect = null;
-		animation = null;
-	}
+    public void setBulletSpeed(float bulletSpeed) {
+        this.bulletSpeed = bulletSpeed;
+    }
+
+    public float getBulletRate() {
+        return bulletRate;
+    }
+
+    public void setBulletRate(float bulletRate) {
+        this.bulletRate = bulletRate;
+    }
+
+    public int getPoints() {
+        return points;
+    }
+
+    public void setPoints(int points) {
+        this.points = points;
+    }
+
+    public int getLives() {
+        return lives;
+    }
+
+    public void setLives(int lives) {
+        this.lives = lives;
+    }
+
+    public float getX() {
+        return x;
+    }
+
+    public void setX(float x) {
+        this.x = x;
+    }
+
+    public float getY() {
+        return y;
+    }
+
+    public void setY(float y) {
+        this.y = y;
+    }
+
+    public Rectangle getRect() {
+        return rect;
+    }
+
+    public void setRect(Rectangle rect) {
+        this.rect = rect;
+    }
+
+    public float getRectX() {
+        return rect.getX();
+    }
+
+    public void setRectX(float x) {
+        rect.setX(x);
+    }
+
+    public float getRectY() {
+        return rect.getY();
+    }
+
+    public void setRectY(float y) {
+        rect.setY(y);
+    }
+
+    // Recibe un impacto
+    public void hit() {
+        lives--;
+    }
+
+    // Dibuja en pantalla el personaje
+    public abstract void draw(SpriteBatch batch);
+
+    public void die() {
+    }
+
+    @Override
+    public void dispose() {
+
+        rect = null;
+        animation = null;
+    }
 }
