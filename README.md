@@ -22,6 +22,7 @@ Los ejemplos de videojuegos más completos se encuentran en sus respectivos repo
     - **box2d_joints**: Cómo crear _joints_ con Box2D
     - **box2d_lights**: Cómo aplicar luces de diferentes tipos con Box2D
     - **box2d_textures**: Cómo aplicar texturas a los cuerpos con Box2D
+- **overlap2d**: Proyectos utilizando el editor de niveles _overlap2d_
 - **jfighter2dx**: Ejemplo de juego de naves 2D (menú, generador de niveles, varios enemigos) 
 - **jumper2dx**: Ejemplo de juego de plataformas utilizando TiledMaps
 - **robin2dx**: Juego 2D tipo _Zelda_ desarrollado con libgdx. Ejemplo de cómo cargar un _TiledMap_, mover un personaje por la pantalla y colisionar con algunos elementos de éste
