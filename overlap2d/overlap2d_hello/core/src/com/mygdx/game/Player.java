@@ -31,13 +31,15 @@ public class Player implements IScript {
     private World world;
 
     enum Direction {
-        RIGHT, LEFT;
+        RIGHT, LEFT, IDLE;
     }
     private Direction direction;
 
     public Player(World world) {
         this.world = world;
         speed = new Vector2(HORIZONTAL_SPEED, 0);
+
+        direction = Direction.IDLE;
     }
 
     @Override
@@ -69,12 +71,20 @@ public class Player implements IScript {
         if (isJumping) {
             if (direction == Direction.RIGHT)
                 transformComponent.rotation -= 90f * dt;
-            else
+            else if (direction == Direction.LEFT)
                 transformComponent.rotation += 90f * dt;
         }
 
         speed.y += GRAVITY;
         transformComponent.y -= speed.y * dt;
+
+        // Si cae, aunque no salte, gira
+        if ((speed.y > 0) && (!isJumping)) {
+            if (direction == Direction.RIGHT)
+                transformComponent.rotation -= 90f * dt;
+            else if (direction == Direction.LEFT)
+                transformComponent.rotation += 90f * dt;
+        }
 
         rayCast(dt);
     }
