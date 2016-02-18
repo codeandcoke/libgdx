@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="30" height="30" tilewidth="16" tileheight="16">
+ <tileset firstgid="1" name="tileset" tilewidth="16" tileheight="16">
+  <image source="public_tileset_by_orohnpokemon-d4vpcfu.png" width="864" height="705"/>
+  <terraintypes>
+   <terrain name="Nuevo Terreno" tile="438"/>
+  </terraintypes>
+  <tile id="273">
+   <properties>
+    <property name="tree" value=""/>
+   </properties>
+  </tile>
+  <tile id="274">
+   <properties>
+    <property name="tree" value=""/>
+   </properties>
+  </tile>
+  <tile id="275">
+   <properties>
+    <property name="tree" value=""/>
+   </properties>
+  </tile>
+  <tile id="327">
+   <properties>
+    <property name="tree" value=""/>
+   </properties>
+  </tile>
+  <tile id="328">
+   <properties>
+    <property name="tree" value=""/>
+   </properties>
+  </tile>
+  <tile id="329">
+   <properties>
+    <property name="tree" value=""/>
+   </properties>
+  </tile>
+  <tile id="381">
+   <properties>
+    <property name="tree" value=""/>
+   </properties>
+  </tile>
+  <tile id="382">
+   <properties>
+    <property name="tree" value=""/>
+   </properties>
+  </tile>
+  <tile id="383">
+   <properties>
+    <property name="tree" value=""/>
+   </properties>
+  </tile>
+  <tile id="435">
+   <properties>
+    <property name="tree" value=""/>
+   </properties>
+  </tile>
+  <tile id="436">
+   <properties>
+    <property name="tree" value=""/>
+   </properties>
+  </tile>
+  <tile id="437">
+   <properties>
+    <property name="tree" value=""/>
+   </properties>
+  </tile>
+  <tile id="1104">
+   <properties>
+    <property name="house" value=""/>
+   </properties>
+  </tile>
+  <tile id="1105">
+   <properties>
+    <property name="house" value=""/>
+   </properties>
+  </tile>
+  <tile id="1106">
+   <properties>
+    <property name="house" value=""/>
+   </properties>
+  </tile>
+  <tile id="1107">
+   <properties>
+    <property name="house" value=""/>
+   </properties>
+  </tile>
+  <tile id="1108">
+   <properties>
+    <property name="house" value=""/>
+   </properties>
+  </tile>
+  <tile id="1158">
+   <properties>
+    <property name="house" value=""/>
+   </properties>
+  </tile>
+  <tile id="1162">
+   <properties>
+    <property name="house" value=""/>
+   </properties>
+  </tile>
+  <tile id="1212">
+   <properties>
+    <property name="house" value=""/>
+   </properties>
+  </tile>
+  <tile id="1213">
+   <properties>
+    <property name="house" value=""/>
+   </properties>
+  </tile>
+  <tile id="1216">
+   <properties>
+    <property name="house" value=""/>
+   </properties>
+  </tile>
+  <tile id="1266">
+   <properties>
+    <property name="house" value=""/>
+   </properties>
+  </tile>
+  <tile id="1267">
+   <properties>
+    <property name="house" value=""/>
+   </properties>
+  </tile>
+  <tile id="1268">
+   <properties>
+    <property name="house" value=""/>
+   </properties>
+  </tile>
+  <tile id="1269">
+   <properties>
+    <property name="house" value=""/>
+   </properties>
+  </tile>
+  <tile id="1270">
+   <properties>
+    <property name="house" value=""/>
+   </properties>
+  </tile>
+  <tile id="1320">
+   <properties>
+    <property name="house" value=""/>
+   </properties>
+  </tile>
+  <tile id="1321">
+   <properties>
+    <property name="house" value=""/>
+   </properties>
+  </tile>
+  <tile id="1322">
+   <properties>
+    <property name="house" value=""/>
+   </properties>
+  </tile>
+  <tile id="1323">
+   <properties>
+    <property name="house" value=""/>
+   </properties>
+  </tile>
+  <tile id="1324">
+   <properties>
+    <property name="house" value=""/>
+   </properties>
+  </tile>
+  <tile id="1374">
+   <properties>
+    <property name="house" value="true"/>
+   </properties>
+  </tile>
+  <tile id="1375">
+   <properties>
+    <property name="house" value=""/>
+   </properties>
+  </tile>
+  <tile id="1376">
+   <properties>
+    <property name="house" value=""/>
+   </properties>
+  </tile>
+  <tile id="1377">
+   <properties>
+    <property name="house" value=""/>
+   </properties>
+  </tile>
+  <tile id="1378">
+   <properties>
+    <property name="house" value=""/>
+   </properties>
+  </tile>
+ </tileset>
+ <tileset firstgid="2377" name="green_bubble_left_1" tilewidth="26" tileheight="19">
+  <image source="../green_bubble_left_1.png" width="26" height="19"/>
+ </tileset>
+ <tileset firstgid="2378" name="player_idle_down" tilewidth="20" tileheight="28">
+  <image source="../player_idle_down.png" width="20" height="28"/>
+ </tileset>
+ <tileset firstgid="2379" name="big_stone" tilewidth="74" tileheight="74">
+  <image source="../big_stone.png" width="74" height="74"/>
+ </tileset>
+ <layer name="base" width="30" height="30">
+  <data encoding="base64" compression="zlib">
+   eJzt1MkJwkAYhuEJJGnC7ezWgKnC7ex2tw23BixAjE24NWABglW4XX0DCQwhAzFDPMgcHn6Y/5v5bmMJIawcbOFhl9P7pjd9b8EWoogSyqjY+ju5V5VrMzvoooe+dD/rTu5V5WbMORZYYiXdz7qTe1W5PfOAI044Y+3o7eTepFyQuTMfeOKFNy6O3k7uTcoFmSrZGupooAnb1dvJvUm5KecD5hAjjDFBy9XbeSFfkduIfES9eb2f1fULfkyaO7dQ/Pzbvy/q/OW/a3pNr+k1vabX9P5b7wfxWcR7
+  </data>
+ </layer>
+ <layer name="trees" width="30" height="30" visible="0">
+  <data encoding="base64" compression="zlib">
+   eJztkUEOgDAIBOkX1EdpH6U+Sn2fe+QATSGkh4ZJNiEhsIchSpIkmYulEK3IVsb27ug7kDq490TfhdyDex/0vcgX2MvdabP3rvWPu9NmiZ671j/uTpsleu5a/7g7bZboubP8k/x59l4sfiOx+I3E4jeS9Gvbe0m/tr2XGf3+hzFHBQ==
+  </data>
+ </layer>
+ <objectgroup name="cosas">
+  <object name="bicho_verde" gid="2377" x="385" y="206">
+   <properties>
+    <property name="bicho" value="verde"/>
+    <property name="velocidad" value="900"/>
+   </properties>
+  </object>
+  <object gid="2378" x="198" y="444">
+   <properties>
+    <property name="movimiento" value="20px"/>
+    <property name="tio_con_gorra" value=""/>
+   </properties>
+  </object>
+  <object gid="2377" x="311" y="205"/>
+  <object gid="2377" x="311" y="205">
+   <properties>
+    <property name="bicho" value="verde"/>
+    <property name="velocidad" value="50"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

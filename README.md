@@ -25,6 +25,7 @@ Los ejemplos de videojuegos más completos se encuentran en sus respectivos repo
 - **overlap2d**: Proyectos utilizando el editor de niveles _overlap2d_
 - **jfighter2dx**: Ejemplo de juego de naves 2D (menú, generador de niveles, varios enemigos) 
 - **jumper2dx**: Ejemplo de juego de plataformas utilizando TiledMaps
+- **link**: Ejemplo de juego utilizando TiledMaps con la última versión de libgdx
 - **robin2dx**: Juego 2D tipo _Zelda_ desarrollado con libgdx. Ejemplo de cómo cargar un _TiledMap_, mover un personaje por la pantalla y colisionar con algunos elementos de éste
 
 Puedes acceder a las _demos_ de algunos de los proyectos [aqui](https://github.com/sfaci/libgdx/releases)
