@@ -25,6 +25,7 @@ public abstract class Character {
     Animation downAnimation;
     TextureRegion currentFrame;
     public Rectangle rect;
+    boolean dead;
 
     public Vector2 position = new Vector2();
     public Vector2 velocity = new Vector2();
@@ -79,5 +80,13 @@ public abstract class Character {
 
         batch.draw(currentFrame, position.x, position.y,
                 rect.getWidth(), rect.getHeight());
+    }
+
+    public void die() {
+        dead = true;
+    }
+
+    public boolean isDead() {
+        return dead;
     }
 }

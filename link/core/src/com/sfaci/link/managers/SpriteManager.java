@@ -13,11 +13,9 @@ import com.badlogic.gdx.maps.tiled.renderers.OrthogonalTiledMapRenderer;
 import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.utils.Array;
 import com.badlogic.gdx.utils.Pool;
+import com.badlogic.gdx.utils.Timer;
 import com.sfaci.link.Link;
-import com.sfaci.link.characters.Enemy;
-import com.sfaci.link.characters.GreenEnemy;
-import com.sfaci.link.characters.Player;
-import com.sfaci.link.characters.YellowEnemy;
+import com.sfaci.link.characters.*;
 import com.sfaci.link.util.Constants;
 
 /**
@@ -35,6 +33,7 @@ public class SpriteManager {
 	
 	Player player;
 	Array<Enemy> enemies;
+    Array<Explosion> explosions;
 
 	// Pool de rectángulos (mejora la eficiencia si se trabaja con muchos)
 	private Pool<Rectangle> rectPool = new Pool<Rectangle>() {
@@ -71,11 +70,44 @@ public class SpriteManager {
 		camera.position.set(player.position.x, player.position.y, 0);
 		
 		handleInput();
-		player.update(dt);
 		checkCollisions();
 
-        for (Enemy enemy : enemies)
-            enemy.update(dt);
+        if (!player.isDead())
+            player.update(dt);
+
+        for (Enemy enemy : enemies) {
+			enemy.update(dt);
+
+			if (enemy.rect.overlaps(player.rect)) {
+                if (enemy instanceof GreenEnemy) {
+                    Explosion explosion = new Explosion(enemy.rect.x, enemy.rect.y,
+                            "green_pop");
+                    explosions.add(explosion);
+                    enemies.removeValue(enemy, true);
+                }
+                else if (enemy instanceof YellowEnemy) {
+                    Explosion explosion = new Explosion(player.rect.x,
+                            player.rect.y, "green_pop");
+                    explosions.add(explosion);
+                    player.toChicken();
+
+                    /*Timer.schedule(new Timer.Task() {
+
+                        @Override
+                        public void run() {
+
+                        }
+                    }, 2000);*/
+                }
+			}
+		}
+
+        for (Explosion explosion : explosions) {
+            explosion.update(dt);
+
+            if (explosion.isDead())
+                explosions.removeValue(explosion, true);
+        }
 	}
 	
 	private void handleInput() {
@@ -104,18 +136,21 @@ public class SpriteManager {
 	}
 	
 	public void render() {
-		
-		//camera.zoom = 1 / 2f;
+
+        //camera.zoom = 1 / 2f;
 		camera.update();
 		// Renderiza el mapa
 		levelManager.mapRenderer.setView(camera);
 		levelManager.mapRenderer.render();
-		
-		// Inicia renderizado del juego
+
+        // Inicia renderizado del juego
 		batch.begin();
-		player.render(batch);
+        if (!player.isDead())
+		    player.render(batch);
         for (Enemy enemy : enemies)
             enemy.render(batch);
+        for (Explosion explosion : explosions)
+            explosion.render(batch);
 		batch.end();
 	}
 	

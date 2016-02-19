@@ -37,6 +37,7 @@ public class LevelManager {
         currentLevel = 1;
 
         spriteManager.enemies = new Array<>();
+        spriteManager.explosions = new Array<>();
     }
 
     public void loadCurrentLevel() {
@@ -65,6 +66,7 @@ public class LevelManager {
     public void loadEnemies() {
 
         Enemy enemy = null;
+        int speed = 0;
         // Carga los objetos "enemigo" del TiledMap
         for (MapObject object : map.getLayers().get("cosas").getObjects()) {
             if (object instanceof TextureMapObject) {
@@ -73,10 +75,15 @@ public class LevelManager {
                     String enemyType = (String) rectangleObject.getProperties().get("bicho");
                     switch (enemyType) {
                         case "verde":
-                            int speed = Integer.parseInt((String) rectangleObject.getProperties().get("velocidad"));
+                            speed = Integer.parseInt((String) rectangleObject.getProperties().get("velocidad"));
                             enemy = new GreenEnemy(rectangleObject.getX(),
                                     rectangleObject.getY(), "green_bubble", speed);
                             break;
+                        case "amarillo":
+                            speed = Integer.parseInt((String) rectangleObject.getProperties().get("velocidad"));
+                            int offset = Integer.parseInt((String) rectangleObject.getProperties().get("desplazamiento"));
+                            enemy = new YellowEnemy(rectangleObject.getX(),
+                                    rectangleObject.getY(), "yellow_bubble", speed, offset);
                         default:
                             break;
                     }

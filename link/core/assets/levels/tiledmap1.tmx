@@ -5,6 +5,11 @@
   <terraintypes>
    <terrain name="Nuevo Terreno" tile="438"/>
   </terraintypes>
+  <tile id="174">
+   <properties>
+    <property name="house" value=""/>
+   </properties>
+  </tile>
   <tile id="273">
    <properties>
     <property name="tree" value=""/>
@@ -200,12 +205,15 @@
  <tileset firstgid="2379" name="big_stone" tilewidth="74" tileheight="74">
   <image source="../big_stone.png" width="74" height="74"/>
  </tileset>
+ <tileset firstgid="2380" name="yellow_bubble_down_2" tilewidth="26" tileheight="21">
+  <image source="../yellow_bubble_down_2.png" width="26" height="21"/>
+ </tileset>
  <layer name="base" width="30" height="30">
   <data encoding="base64" compression="zlib">
-   eJzt1MkJwkAYhuEJJGnC7ezWgKnC7ex2tw23BixAjE24NWABglW4XX0DCQwhAzFDPMgcHn6Y/5v5bmMJIawcbOFhl9P7pjd9b8EWoogSyqjY+ju5V5VrMzvoooe+dD/rTu5V5WbMORZYYiXdz7qTe1W5PfOAI044Y+3o7eTepFyQuTMfeOKFNy6O3k7uTcoFmSrZGupooAnb1dvJvUm5KecD5hAjjDFBy9XbeSFfkduIfES9eb2f1fULfkyaO7dQ/Pzbvy/q/OW/a3pNr+k1vabX9P5b7wfxWcR7
+   eJzt1MkJwkAYhuEREptwO7s1YKpwO7vdLcAG3BqwADHexALcGrAAwSrcrr6BCEPIQMwwtzk8/DD/N/NdQjJCiIwBG3jYGnrf9ibvzTlC5FFAESVHfyf3qnJNZgttdNCV7qfdyb2q3JQ5wxwLLKX7aXdyryp3YB5xwhkXrFy9ndwblwsyD+YTL7zxwdXV28m9cbkgUyZbQRU11OFk9XZyb1xuzHmP2ccAQ4zQyOrtvJCvyK2FGb9eU++ndfuDH5Hkzj0UPZ8ktA+/lV9n8L3s/rgflfR/q+o1/Z+3vbbX9tpe22t7TfZ+AUpz5bM=
   </data>
  </layer>
- <layer name="trees" width="30" height="30" visible="0">
+ <layer name="trees" width="30" height="30">
   <data encoding="base64" compression="zlib">
    eJztkUEOgDAIBOkX1EdpH6U+Sn2fe+QATSGkh4ZJNiEhsIchSpIkmYulEK3IVsb27ug7kDq490TfhdyDex/0vcgX2MvdabP3rvWPu9NmiZ671j/uTpsleu5a/7g7bZboubP8k/x59l4sfiOx+I3E4jeS9Gvbe0m/tr2XGf3+hzFHBQ==
   </data>
@@ -214,7 +222,7 @@
   <object name="bicho_verde" gid="2377" x="385" y="206">
    <properties>
     <property name="bicho" value="verde"/>
-    <property name="velocidad" value="900"/>
+    <property name="velocidad" value="20"/>
    </properties>
   </object>
   <object gid="2378" x="198" y="444">
@@ -227,7 +235,21 @@
   <object gid="2377" x="311" y="205">
    <properties>
     <property name="bicho" value="verde"/>
-    <property name="velocidad" value="50"/>
+    <property name="velocidad" value="20"/>
+   </properties>
+  </object>
+  <object gid="2380" x="180" y="249">
+   <properties>
+    <property name="bicho" value="amarillo"/>
+    <property name="desplazamiento" value="40"/>
+    <property name="velocidad" value="30"/>
+   </properties>
+  </object>
+  <object gid="2380" x="181" y="297">
+   <properties>
+    <property name="bicho" value="amarillo"/>
+    <property name="desplazamiento" value="40"/>
+    <property name="velocidad" value="20"/>
    </properties>
   </object>
  </objectgroup>
