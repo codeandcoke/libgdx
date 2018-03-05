@@ -92,7 +92,7 @@ public class WorldGenerator {
 		// Coeficiente de fricci�n (0 - 1)
 		fixtureDef.friction = 0.8f;
 		// Elasticidad (0 - 1)
-		fixtureDef.restitution = 0.2f;
+		fixtureDef.restitution = 0f;
 		// A�ade el elemento f�sico al cuerpo del mundo 2D
 		Fixture fixture = body.createFixture(fixtureDef);
 		

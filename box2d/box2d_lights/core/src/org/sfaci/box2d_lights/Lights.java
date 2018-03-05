@@ -112,13 +112,13 @@ public class Lights extends Game {
 		 *  A�ade una luz direccional (misma iluminaci�n en todo el mundo)
 		 *  params: gestor de luces, n�mero de rayos, color, �ngulo de inclinaci�n
 		 */
-		//DirectionalLight directionalLight = new DirectionalLight(rayHandler, 2000, Color.WHITE, -45);
+		DirectionalLight directionalLight = new DirectionalLight(rayHandler, 2000, Color.WHITE, -45);
 		
 		/*
 		 *  A�ade una direcci�n con forma de cono (o circula si el �ngulo es de 180)
 		 *  params: gestor de luces, n�mero de rayos, color, distancia, x, y, angulo posici�n, angulo luz
 		 */
-		//ConeLight coneLight = new ConeLight(rayHandler, 2000, Color.YELLOW, 1000, 200, 200, -90, 45);
+		ConeLight coneLight = new ConeLight(rayHandler, 2000, Color.YELLOW, 1000, 200, 200, -90, 45);
 	}
 
 	/*
