@@ -116,7 +116,6 @@ public class Joints extends Game implements InputProcessor {
 	}
 	
 	private void handleInput() {
-		
 		if (Gdx.input.isKeyPressed(Keys.LEFT)) {
 			if (car.getLinearVelocity().x > -MAX_SPEED)
 				car.applyLinearImpulse(new Vector2(-4000f, 0), car.getPosition(), true);
@@ -165,7 +164,6 @@ public class Joints extends Game implements InputProcessor {
 	private Vector3 aux = new Vector3();
 	private Vector2 aux2 = new Vector2();
 	private QueryCallback query = new QueryCallback() {
-		
 		@Override
 		public boolean reportFixture(Fixture fixture) {
 			if (!fixture.testPoint(aux.x, aux.y))
@@ -180,7 +178,6 @@ public class Joints extends Game implements InputProcessor {
 
 	@Override
 	public boolean touchDown(int screenX, int screenY, int pointer, int button) {
-		
 		camera.unproject(aux.set(screenX, screenY, 0));
 		world.QueryAABB(query, aux.x, aux.y, aux.x, aux.y);
 		
@@ -192,7 +189,7 @@ public class Joints extends Game implements InputProcessor {
 	@Override
 	public boolean touchUp(int screenX, int screenY, int pointer, int button) {
 		if (mouseJoint == null)
-		return false;
+			return false;
 		
 		world.destroyJoint(mouseJoint);
 		mouseJoint = null;
@@ -200,6 +197,11 @@ public class Joints extends Game implements InputProcessor {
 		System.out.println("up");
 		
 		return true;
+	}
+
+	@Override
+	public boolean touchCancelled(int i, int i1, int i2, int i3) {
+		return false;
 	}
 
 	@Override
@@ -222,10 +224,7 @@ public class Joints extends Game implements InputProcessor {
 	}
 
 	@Override
-	public boolean scrolled(int amount) {
-		// TODO Auto-generated method stub
+	public boolean scrolled(float v, float v1) {
 		return false;
 	}
-	
-	
 }
